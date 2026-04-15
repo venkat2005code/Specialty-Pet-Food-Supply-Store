@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - PetStore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#8b5cf6', secondary: '#ec4899' } } } }</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+<text y='50' font-size='50'>🐾</text>
+</svg>">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar-sticky bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <span class="text-3xl">🐾</span>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">PetStore</span>
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <div class="dropdown relative">
+                        <button class="nav-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium flex items-center space-x-1"><span>Home</span><i class="fas fa-chevron-down text-xs"></i></button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border py-2">
+                            <a href="index.html" class="block px-4 py-2 hover:bg-purple-50 dark:hover:bg-gray-700">Home 1</a>
+                            <a href="index2.html" class="block px-4 py-2 hover:bg-purple-50 dark:hover:bg-gray-700">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium">About</a>
+                    <a href="services.html" class="nav-link px-4 py-2 rounded-lg text-purple-600 font-semibold">Services</a>
+                    <a href="blog.html" class="nav-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium">Blog</a>
+                    <a href="pricing.html" class="nav-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium">Pricing</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium">Contact</a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="dashboard.html" class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 font-medium"><i class="fas fa-chart-line mr-2"></i>Dashboard</a>
+                    <button id="rtlToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">🌍 RTL</button>
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block text-yellow-400"></i></button>
+                    <a href="login.html" class="btn-glow px-6 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold">Login</a>
+                </div>
+                <div class="lg:hidden"><button id="mobileMenuBtn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><i class="fas fa-bars text-2xl"></i></button></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-white dark:bg-gray-900 lg:hidden">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between p-4 border-b dark:border-gray-700">
+                <a href="index.html" class="flex items-center space-x-2"><span class="text-3xl">🐾</span><span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">PetStore</span></a>
+                <button id="closeMobileMenu" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><i class="fas fa-times text-2xl"></i></button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-4">
+                <div class="space-y-2">
+                    <a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800">Home 1</a>
+                    <a href="index2.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800">Home 2</a>
+                    <a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800">About</a>
+                    <a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800 text-purple-600 font-semibold">Services</a>
+                    <a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800">Blog</a>
+                    <a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800">Pricing</a>
+                    <a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800">Contact</a>
+                    <a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-800">Dashboard</a>
+                </div>
+                <div class="mt-6 pt-6 border-t dark:border-gray-700 space-y-3">
+                    <button id="rtlToggleMobile" class="w-full px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-left">🌍 RTL Toggle</button>
+                    <button id="darkModeToggleMobile" class="w-full px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-left">🌙 Dark Mode</button>
+                    <a href="login.html" class="block w-full px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold text-center">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="py-20 bg-gradient-to-br from-purple-600 to-pink-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Our Products</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">Premium quality products for your beloved pets</p>
+        </div>
+    </section>
+
+    <!-- FILTERS & PRODUCTS -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Search and Filters -->
+            <div class="mb-12">
+                <div class="flex flex-col md:flex-row gap-4 mb-8">
+                    <div class="flex-1">
+                        <input type="text" id="searchInput" placeholder="Search products..." class="w-full px-6 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    <select class="px-6 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Rating</option>
+                    </select>
+                </div>
+                
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <button class="filter-tag active px-6 py-3 rounded-full font-semibold" data-filter="all">All Products</button>
+                    <button class="filter-tag px-6 py-3 rounded-full font-semibold" data-filter="dogs">🐕 Dogs</button>
+                    <button class="filter-tag px-6 py-3 rounded-full font-semibold" data-filter="cats">🐱 Cats</button>
+                    <button class="filter-tag px-6 py-3 rounded-full font-semibold" data-filter="accessories">🎾 Accessories</button>
+                    <button class="filter-tag px-6 py-3 rounded-full font-semibold" data-filter="health">💊 Health</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-item searchable-item" data-category="dogs">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400" alt="Dog Food" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$29.99</span>
+                                <span class="discount">-20%</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Premium Dog Food</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(4.5)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">High-protein formula for active dogs</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item searchable-item" data-category="cats">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400" alt="Cat Food" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$24.99</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Gourmet Cat Food</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(5.0)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Rich in omega-3 for healthy coat</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item searchable-item" data-category="accessories">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=400" alt="Pet Toy" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$14.99</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Interactive Pet Toy</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(4.0)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Keep your pet entertained for hours</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-item searchable-item" data-category="health">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400" alt="Vitamins" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn active"><i class="fas fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$19.99</span>
+                                <span class="discount">-15%</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Pet Vitamins</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(4.7)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Essential nutrients for overall health</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Products -->
+                <div class="product-item searchable-item" data-category="dogs">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=400" alt="Dog Treats" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$12.99</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Natural Dog Treats</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(4.9)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Organic treats with real chicken</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item searchable-item" data-category="cats">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=400" alt="Cat Tree" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$89.99</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Luxury Cat Tree</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(4.8)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Multi-level play structure</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item searchable-item" data-category="accessories">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://bedsurehome.com/cdn/shop/files/91opMbWGjQL._AC_SL1500_55434e86-b97d-40c1-9c9f-d81595612c86.jpg?v=1723626818" alt="Pet Bed" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$39.99</span>
+                                <span class="discount">-25%</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Orthopedic Pet Bed</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(5.0)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Memory foam for joint support</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item searchable-item" data-category="health">
+                    <div class="product-card bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                        <div class="relative">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.ren6OmHMshjBurzaxW_jPwHaDi?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Flea Treatment" class="w-full h-64 object-cover">
+                            <div class="wishlist-btn"><i class="far fa-heart"></i></div>
+                            <div class="price-tag absolute bottom-4 left-4">
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">$27.99</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-2">Flea & Tick Treatment</h3>
+                            <div class="star-rating mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm ml-2">(4.6)</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Long-lasting protection</p>
+                            <a href="service-details.html" class="view-details-btn w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all block text-center">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="flex space-x-2">
+                    <button class="px-4 py-2 rounded-lg border dark:border-gray-700 hover:bg-purple-600 hover:text-white transition-colors"><i class="fas fa-chevron-left"></i></button>
+                    <button class="px-4 py-2 rounded-lg bg-purple-600 text-white">1</button>
+                    <button class="px-4 py-2 rounded-lg border dark:border-gray-700 hover:bg-purple-600 hover:text-white transition-colors">2</button>
+                    <button class="px-4 py-2 rounded-lg border dark:border-gray-700 hover:bg-purple-600 hover:text-white transition-colors">3</button>
+                    <button class="px-4 py-2 rounded-lg border dark:border-gray-700 hover:bg-purple-600 hover:text-white transition-colors"><i class="fas fa-chevron-right"></i></button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4"><span class="text-3xl">🐾</span><span class="text-2xl font-bold">PetStore</span></div>
+                    <p class="text-gray-400 mb-4">Your trusted partner for premium pet care products and services.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-purple-400 transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-purple-400 transition-colors">Products</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-purple-400 transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-purple-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-purple-400"></i><span class="text-gray-400">123 Pet Street, Animal City, AC 12345</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-purple-400"></i><span class="text-gray-400">+1 (555) 123-4567</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-purple-400"></i><span class="text-gray-400">info@petstore.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2026 PetStore. All rights reserved. Made with ❤️ for pets</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

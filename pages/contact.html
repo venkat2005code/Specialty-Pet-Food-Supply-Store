@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PetStore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#8b5cf6' } } } }</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+<text y='50' font-size='50'>🐾</text>
+</svg>">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <nav class="navbar-sticky bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4"><div class="flex items-center justify-between h-20"><div><a href="index.html" class="flex items-center space-x-2"><span class="text-3xl">🐾</span><span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">PetStore</span></a></div><div class="hidden lg:flex items-center space-x-1"><div class="dropdown relative"><button class="px-4 py-2 hover:text-purple-600"><span>Home</span><i class="fas fa-chevron-down text-xs"></i></button><div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border py-2"><a href="index.html" class="block px-4 py-2 hover:bg-purple-50">Home 1</a><a href="index2.html" class="block px-4 py-2 hover:bg-purple-50">Home 2</a></div></div><a href="about.html" class="px-4 py-2 hover:text-purple-600">About</a><a href="services.html" class="px-4 py-2 hover:text-purple-600">Services</a><a href="blog.html" class="px-4 py-2 hover:text-purple-600">Blog</a><a href="pricing.html" class="px-4 py-2 hover:text-purple-600">Pricing</a><a href="contact.html" class="px-4 py-2 text-purple-600 font-semibold">Contact</a></div><div class="hidden lg:flex items-center space-x-3"><a href="dashboard.html" class="px-4 py-2 hover:text-purple-600"><i class="fas fa-chart-line mr-2"></i>Dashboard</a><button id="rtlToggle" class="p-2 rounded-lg hover:bg-gray-100">🌍 RTL</button><button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block text-yellow-400"></i></button><a href="login.html" class="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold">Login</a></div><div class="lg:hidden"><button id="mobileMenuBtn" class="p-2"><i class="fas fa-bars text-2xl"></i></button></div></div></div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-white dark:bg-gray-900 lg:hidden"><div class="flex flex-col h-full"><div class="flex items-center justify-between p-4 border-b"><a href="index.html" class="flex items-center space-x-2"><span class="text-3xl">🐾</span><span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">PetStore</span></a><button id="closeMobileMenu" class="p-2"><i class="fas fa-times text-2xl"></i></button></div><div class="flex-1 overflow-y-auto p-4"><div class="space-y-2"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50">Home 1</a><a href="index2.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50">Home 2</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50">Services</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50">Blog</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50">Pricing</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50 text-purple-600 font-semibold">Contact</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-purple-50">Dashboard</a></div><div class="mt-6 pt-6 border-t dark:border-gray-700 space-y-3"><button id="rtlToggleMobile" class="w-full px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-left">🌍 RTL Toggle</button><button id="darkModeToggleMobile" class="w-full px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-left">🌙 Dark Mode</button><a href="login.html" class="block w-full px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold text-center">Login</a></div></div></div></div>
+
+    <section class="py-20 bg-gradient-to-br from-purple-600 to-pink-600 text-white"><div class="container mx-auto px-4 text-center"><h1 class="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1><p class="text-xl opacity-90 max-w-2xl mx-auto">We'd love to hear from you! Reach out with any questions or feedback.</p></div></section>
+
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-stretch">
+                <!-- Contact Form -->
+                <div class="h-full">
+                    <h2 class="text-3xl font-bold mb-8">Send us a Message</h2>
+                    <form data-validate class="space-y-6">
+                        <div><label class="block text-sm font-semibold mb-2">Your Name*</label><input type="text" required class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-600"></div>
+                        <div><label class="block text-sm font-semibold mb-2">Email Address*</label><input type="email" required class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-600"></div>
+                        <div><label class="block text-sm font-semibold mb-2">Subject*</label><input type="text" required class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-600"></div>
+                        <div><label class="block text-sm font-semibold mb-2">Message*</label><textarea rows="8" required class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-600"></textarea></div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold text-lg hover:shadow-lg transition-all">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="h-full flex flex-col">
+                    <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
+                    <div class="space-y-6 mb-8 flex-1">
+                        <div class="flex items-start gap-4"><div class="w-12 h-12 shrink-0 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center text-purple-600"><i class="fas fa-map-marker-alt text-xl"></i></div><div><h3 class="font-bold mb-1">Address</h3><p class="text-gray-600 dark:text-gray-400">123 Pet Street, Animal City, AC 12345</p></div></div>
+                        <div class="flex items-start gap-4"><div class="w-12 h-12 shrink-0 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center text-purple-600"><i class="fas fa-phone text-xl"></i></div><div><h3 class="font-bold mb-1">Phone</h3><p class="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p></div></div>
+                        <div class="flex items-start gap-4"><div class="w-12 h-12 shrink-0 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center text-purple-600"><i class="fas fa-envelope text-xl"></i></div><div><h3 class="font-bold mb-1">Email</h3><p class="text-gray-600 dark:text-gray-400">info@petstore.com</p></div></div>
+                        <div class="flex items-start gap-4"><div class="w-12 h-12 shrink-0 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center text-purple-600"><i class="fas fa-clock text-xl"></i></div><div><h3 class="font-bold mb-1">Business Hours</h3><p class="text-gray-600 dark:text-gray-400">Mon-Fri: 9AM - 6PM<br>Sat-Sun: 10AM - 4PM</p></div></div>
+                    </div>
+                    
+                    <!-- Map Embed -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg h-64 bg-gray-200 dark:bg-gray-700 mt-auto">
+                        <iframe
+                            title="PetStore location map"
+                            src="https://www.google.com/maps?q=123%20Pet%20Street,%20Animal%20City,%20AC%2012345&z=15&output=embed"
+                            class="w-full h-full border-0"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://www.google.com/maps/search/?api=1&query=123%20Pet%20Street,%20Animal%20City,%20AC%2012345" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
+                            Open in Google Maps <i class="fas fa-arrow-up-right-from-square ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16"><div class="container mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"><div><div class="flex items-center space-x-2 mb-4"><span class="text-3xl">🐾</span><span class="text-2xl font-bold">PetStore</span></div><p class="text-gray-400 mb-4">Your trusted partner for premium pet care products and services.</p></div><div><h3 class="text-lg font-bold mb-4">Quick Links</h3><ul class="space-y-2"><li><a href="about.html" class="text-gray-400 hover:text-purple-400">About Us</a></li><li><a href="services.html" class="text-gray-400 hover:text-purple-400">Products</a></li><li><a href="blog.html" class="text-gray-400 hover:text-purple-400">Blog</a></li><li><a href="contact.html" class="text-gray-400 hover:text-purple-400">Contact</a></li></ul></div><div><h3 class="text-lg font-bold mb-4">Customer Service</h3><ul class="space-y-2"><li><a href="#" class="text-gray-400 hover:text-purple-400">FAQ</a></li><li><a href="#" class="text-gray-400 hover:text-purple-400">Shipping Info</a></li><li><a href="#" class="text-gray-400 hover:text-purple-400">Returns</a></li></ul></div><div><h3 class="text-lg font-bold mb-4">Contact Us</h3><ul class="space-y-3"><li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-purple-400"></i><span class="text-gray-400">123 Pet Street, Animal City, AC 12345</span></li><li class="flex items-center"><i class="fas fa-phone mr-3 text-purple-400"></i><span class="text-gray-400">+1 (555) 123-4567</span></li><li class="flex items-center"><i class="fas fa-envelope mr-3 text-purple-400"></i><span class="text-gray-400">info@petstore.com</span></li></ul></div></div><div class="border-t border-gray-800 pt-8 text-center"><p class="text-gray-400">&copy; 2026 PetStore. All rights reserved. Made with ❤️ for pets</p></div></div></footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
