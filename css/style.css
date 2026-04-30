@@ -1825,6 +1825,38 @@ section {
     }
 }
 
+@media (max-width: 768px) {
+    .toggle-wrapper {
+        display: inline-flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .toggle-option {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .save-badge {
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    .pricing-plans .container {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+        overflow-x: hidden;
+    }
+}
+
 /* Comparison Table */
 .table-wrapper {
     overflow-x: auto;
@@ -2820,8 +2852,12 @@ section {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: var(--space-lg);
+    padding: var(--space-xl);
     box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .testimonial-card .quote {
@@ -2853,15 +2889,51 @@ section {
 
 .testimonial-card .rating {
     color: #F59E0B !important;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.member-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 12px 0;
+}
+
+.member-badge--primary {
+    background: var(--primary);
+    color: white;
+}
+
+.member-badge--secondary {
+    background: var(--secondary);
+    color: white;
+}
+
+.member-badge--outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }
 
 .testimonial-cta {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .testimonial-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .testimonial-card {
+        padding: var(--space-lg);
     }
 }
 
@@ -3242,8 +3314,7 @@ section {
 @media (max-width: 1023px) {
 
     .header__actions .btn-primary,
-    .header__actions .btn-secondary,
-    .header__actions .icon-btn:not(.mobile-menu-btn) {
+    .header__actions .btn-secondary {
         display: none;
     }
 
@@ -3700,6 +3771,8 @@ html[dir="rtl"] .nav-list {
 
 /* Status Badges */
 .badge {
+    display: inline-block;
+    white-space: nowrap;
     padding: 4px 12px;
     border-radius: var(--radius-full);
     font-size: 0.75rem;
