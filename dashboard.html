@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | PawStore</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M30,50 Q20,30 40,20 Q60,10 70,30 Q80,50 60,70 Q40,90 30,70 Z' fill='%231E1B4B'/></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+        <div class="dash-sidebar-header">
+            <a href="index.html" class="logo"><i data-lucide="paw-print"></i> PawStore</a>
+            <span class="dash-label">User Dashboard</span>
+        </div>
+
+        <nav class="dash-sidebar-nav">
+            <div class="nav-section-title">Main</div>
+            <a href="#" class="dash-nav-link active" data-target="overview">
+                <i data-lucide="home"></i> Overview
+            </a>
+            <a href="#" class="dash-nav-link" data-target="orders">
+                <i data-lucide="package"></i> My Orders
+            </a>
+            <a href="#" class="dash-nav-link" data-target="wishlist">
+                <i data-lucide="heart"></i> My Pets & Wishlist
+            </a>
+
+            <div class="nav-section-title">Membership</div>
+            <a href="#" class="dash-nav-link" data-target="plan">
+                <i data-lucide="star"></i> Plan & Rewards
+            </a>
+            <a href="#" class="dash-nav-link" data-target="box">
+                <i data-lucide="mail"></i> Subscription Box
+            </a>
+
+            <div class="nav-section-title">Account</div>
+            <a href="#" class="dash-nav-link" data-target="profile">
+                <i data-lucide="user"></i> Account Settings
+            </a>
+            <a href="#" class="dash-nav-link" data-target="help">
+                <i data-lucide="help-circle"></i> Help & Support
+            </a>
+        </nav>
+
+        <div class="dash-sidebar-footer">
+            <div class="dash-user-info">
+                <div class="dash-avatar">AK</div>
+                <div class="dash-user-details">
+                    <span class="name">Arjun Kumar</span>
+                    <span class="email">arjun@email.com</span>
+                </div>
+            </div>
+            <a href="login.html" class="logout-link">
+                <i data-lucide="log-out"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dash-main">
+        <header class="dash-header">
+            <div class="dash-header-left">
+                <button class="menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+                <h1>Overview</h1>
+            </div>
+            <div class="dash-header-right">
+                <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+                    RTL / LTR
+                </button>
+                <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+                <div class="notif-btn">
+                    <button class="icon-btn">
+                        <i data-lucide="bell"></i>
+                    </button>
+                    <span class="notif-badge">3</span>
+                </div>
+                <div class="dash-header-avatar">AK</div>
+            </div>
+        </header>
+
+        <div class="dash-content">
+            
+            <!-- PANEL 1: OVERVIEW -->
+            <div class="dash-panel active" id="overview">
+                <div class="panel-header">
+                    <h2>Good morning, Arjun! <i data-lucide="paw-print" style="width: 24px; vertical-align: middle;"></i></h2>
+                    <p>Here's what's happening with your pets today.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">
+                        <div class="stat-icon"><i data-lucide="package"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Orders</h3>
+                            <div class="stat-value">24</div>
+                            <div class="stat-trend up">↑ 3 this month</div>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'plan\']').click()">
+                        <div class="stat-icon"><i data-lucide="star"></i></div>
+                        <div class="stat-info">
+                            <h3>Active Plan</h3>
+                            <div class="stat-value" style="font-size: 1.5rem;">Popular Paws</div>
+                            <div class="stat-trend">Renews in 12 days</div>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'plan\']').click()">
+                        <div class="stat-icon"><i data-lucide="gift"></i></div>
+                        <div class="stat-info">
+                            <h3>Reward Points</h3>
+                            <div class="stat-value">1,240</div>
+                            <div class="stat-trend up">↑ 150 pts</div>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">
+                        <div class="stat-icon"><i data-lucide="truck"></i></div>
+                        <div class="stat-info">
+                            <h3>Pending Delivery</h3>
+                            <div class="stat-value">02</div>
+                            <div class="stat-trend">Next: Tomorrow</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <div class="table-header">
+                        <h3>Recent Orders</h3>
+                        <button class="btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">View All</button>
+                    </div>
+                    <div class="dash-table-wrapper">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Product</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#PW1024</td>
+                                    <td>Royal Canin Adult Maxi</td>
+                                    <td>28 Apr 2026</td>
+                                    <td>₹1,299</td>
+                                    <td><span class="badge badge-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#PW1023</td>
+                                    <td>Kong Classic Toy</td>
+                                    <td>25 Apr 2026</td>
+                                    <td>₹799</td>
+                                    <td><span class="badge badge-transit">In Transit</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#PW1022</td>
+                                    <td>Whiskas Tuna</td>
+                                    <td>20 Apr 2026</td>
+                                    <td>₹499</td>
+                                    <td><span class="badge badge-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#PW1021</td>
+                                    <td>Beaphar Vitamins</td>
+                                    <td>15 Apr 2026</td>
+                                    <td>₹649</td>
+                                    <td><span class="badge badge-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#PW1020</td>
+                                    <td>Trixie Board</td>
+                                    <td>10 Apr 2026</td>
+                                    <td>₹1,199</td>
+                                    <td><span class="badge badge-delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dash-grid-2">
+                    <div class="dash-card">
+                        <h3>Spending Overview (Monthly)</h3>
+                        <div class="area-chart">
+                            <div class="area-point" style="height: 20%;"></div>
+                            <div class="area-point" style="height: 35%;"></div>
+                            <div class="area-point" style="height: 50%;"></div>
+                            <div class="area-point" style="height: 45%;"></div>
+                            <div class="area-point" style="height: 80%;"></div>
+                            <div class="area-point" style="height: 70%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-top: 10px; color: var(--text-secondary); font-size: 0.7rem;">
+                            <span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Nov</span>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <h3>Reward Points History</h3>
+                        <div class="bar-chart" style="height: 150px;">
+                            <div class="bar-wrapper"><div class="bar" style="height: 40%; width: 20px;"></div><span class="bar-label" style="bottom: -20px;">W1</span></div>
+                            <div class="bar-wrapper"><div class="bar" style="height: 70%; width: 20px;"></div><span class="bar-label" style="bottom: -20px;">W2</span></div>
+                            <div class="bar-wrapper"><div class="bar" style="height: 30%; width: 20px;"></div><span class="bar-label" style="bottom: -20px;">W3</span></div>
+                            <div class="bar-wrapper"><div class="bar" style="height: 90%; width: 20px;"></div><span class="bar-label" style="bottom: -20px;">W4</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dash-card" style="margin-top: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>💡 Pet Health Insights</h3>
+                        <span class="badge badge-processing">Proactive Update</span>
+                    </div>
+                    <div class="dash-grid-3" style="margin-top: 20px;">
+                        <div style="padding: 16px; background: var(--bg-alt); border-radius: 12px; border-left: 4px solid var(--primary);">
+                            <h4 style="font-size: 0.9rem; margin-bottom: 8px;">Vaccination Alert</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);">Bruno's Rabies shot is due in 14 days. <a href="#" style="color: var(--primary); font-weight: 600;">Book Vet →</a></p>
+                        </div>
+                        <div style="padding: 16px; background: var(--bg-alt); border-radius: 12px; border-left: 4px solid var(--secondary);">
+                            <h4 style="font-size: 0.9rem; margin-bottom: 8px;">Daily Activity</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);">Whiskas reached 85% of her play goal today. Keep it up!</p>
+                        </div>
+                        <div style="padding: 16px; background: var(--bg-alt); border-radius: 12px; border-left: 4px solid #F59E0B;">
+                            <h4 style="font-size: 0.9rem; margin-bottom: 8px;">Nutrition Tip</h4>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);">Add a spoon of pumpkin puree to Bruno's meal for better digestion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-grid">
+                    <a href="services.html" class="action-card">
+                        <div class="stat-icon"><i data-lucide="shopping-cart"></i></div>
+                        <div>
+                            <h3>Continue Shopping</h3>
+                            <p>Browse our latest arrivals</p>
+                        </div>
+                    </a>
+                    <a href="#" class="action-card" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">
+                        <div class="stat-icon"><i data-lucide="map"></i></div>
+                        <div>
+                            <h3>Track My Order</h3>
+                            <p>Check delivery status</p>
+                        </div>
+                    </a>
+                    <a href="pricing.html" class="action-card">
+                        <div class="stat-icon"><i data-lucide="trending-up"></i></div>
+                        <div>
+                            <h3>Upgrade Plan</h3>
+                            <p>Get more benefits</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PANEL 2: MY ORDERS -->
+            <div class="dash-panel" id="orders">
+                <div class="panel-header">
+                    <h2>My Orders</h2>
+                    <p>Track and manage all your PawStore orders</p>
+                </div>
+                <div class="order-list" style="display: flex; flex-direction: column; gap: 16px;">
+                    <div class="dash-card">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                            <strong>Order #PW1024</strong>
+                            <span class="badge badge-delivered">Delivered</span>
+                        </div>
+                        <div class="order-item-content">
+                            <div class="order-thumb" style="background-image: url('images/gettyimages-1265235648-612x612.jpg');"></div>
+                            <div class="order-details">
+                                <h4 style="margin: 0;">Royal Canin Adult Maxi (2kg)</h4>
+                                <small style="color: var(--text-secondary);">Ordered on 28 Apr 2026 • ₹1,299</small>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-secondary">View Details</button>
+                                <button class="btn-secondary">Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                            <strong>Order #PW1023</strong>
+                            <span class="badge badge-transit">In Transit</span>
+                        </div>
+                        <div class="order-item-content">
+                            <div class="order-thumb" style="background-image: url('images/gettyimages-1265237454-612x612.jpg');"></div>
+                            <div class="order-details">
+                                <h4 style="margin: 0;">Kong Classic Rubber Toy</h4>
+                                <small style="color: var(--text-secondary);">Ordered on 25 Apr 2026 • ₹799</small>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-secondary">Track Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                            <strong>Order #PW1020</strong>
+                            <span class="badge badge-delivered">Delivered</span>
+                        </div>
+                        <div class="order-item-content">
+                            <div class="order-thumb" style="background-image: url('images/gettyimages-2226372405-612x612.jpg');"></div>
+                            <div class="order-details">
+                                <h4 style="margin: 0;">Trixie Scratching Post</h4>
+                                <small style="color: var(--text-secondary);">Ordered on 10 Apr 2026 • ₹2,199</small>
+                            </div>
+                            <div class="order-actions">
+                                <button class="btn-secondary">Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 3: WISHLIST & PETS -->
+            <div class="dash-panel" id="wishlist">
+                <div class="panel-header">
+                    <h2>My Pets</h2>
+                    <p>Personalized care for your companions</p>
+                </div>
+                <div class="dash-grid-3" style="margin-bottom: 40px;">
+                    <div class="dash-card" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 16px; background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; border-radius: 50%;"></div>
+                        <h3>Bruno</h3>
+                        <div style="text-align: left; margin: 16px 0;">
+                            <p style="margin-bottom: 4px;"><span style="color: var(--text-muted);">Type:</span> <strong>Labrador</strong></p>
+                            <p style="margin-bottom: 4px;"><span style="color: var(--text-muted);">Age:</span> <strong>4 Years</strong></p>
+                            <p style="margin-bottom: 4px;"><span style="color: var(--text-muted);">Weight:</span> <strong>28kg</strong></p>
+                        </div>
+                        <button class="btn-secondary" style="width: 100%;">Edit Profile</button>
+                    </div>
+                    <div class="dash-card" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 16px; background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; border-radius: 50%;"></div>
+                        <h3>Whiskers</h3>
+                        <div style="text-align: left; margin: 16px 0;">
+                            <p style="margin-bottom: 4px;"><span style="color: var(--text-muted);">Type:</span> <strong>Persian Cat</strong></p>
+                            <p style="margin-bottom: 4px;"><span style="color: var(--text-muted);">Age:</span> <strong>2 Years</strong></p>
+                            <p style="margin-bottom: 4px;"><span style="color: var(--text-muted);">Weight:</span> <strong>4kg</strong></p>
+                        </div>
+                        <button class="btn-secondary" style="width: 100%;">Edit Profile</button>
+                    </div>
+                    <div class="dash-card add-new-card">
+                        <i data-lucide="plus" style="width: 48px; height: 48px; color: var(--primary); margin-bottom: 12px;"></i>
+                        <h3>Add New Pet</h3>
+                        <button class="btn-primary">Add Pet</button>
+                    </div>
+                </div>
+
+                <div class="panel-header">
+                    <h2>Wishlist</h2>
+                    <p>Products you've saved for later</p>
+                </div>
+                <div class="dash-grid-4">
+                    <div class="dash-card" style="text-align: center;">
+                        <div style="height: 120px; background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: 12px;"></div>
+                        <h4 style="margin: 8px 0;">Drools Focus Adult</h4>
+                        <p style="color: var(--secondary); font-weight: 700;">₹899</p>
+                        <button class="btn-primary" style="width: 100%; margin-top: 12px;">Add to Cart</button>
+                    </div>
+                    <div class="dash-card" style="text-align: center;">
+                        <div style="height: 120px; background-image: url('images/gettyimages-2232665282-612x612.jpg'); background-size: cover; background-position: center; border-radius: var(--radius-md); margin-bottom: 12px;"></div>
+                        <h4 style="margin: 8px 0;">Pedigree Pro Expert</h4>
+                        <p style="color: var(--secondary); font-weight: 700;">₹1,499</p>
+                        <button class="btn-primary" style="width: 100%; margin-top: 12px;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 4: PLAN & REWARDS -->
+            <div class="dash-panel" id="plan">
+                <div class="panel-header">
+                    <h2>Membership Plan</h2>
+                    <p>Current Status: <strong>Active</strong></p>
+                </div>
+                <div class="membership-hero">
+                    <div class="membership-info">
+                        <h3>⭐ Popular Paws</h3>
+                        <div class="membership-price">₹499<span>/month</span></div>
+                        <p>Next renewal: 1 June 2026</p>
+                    </div>
+                    <div class="membership-actions">
+                        <button class="btn-secondary manage-btn">Manage Plan</button>
+                        <button class="btn-secondary cancel-btn">Cancel Plan</button>
+                    </div>
+                </div>
+
+                <div class="panel-header">
+                    <h2>Rewards & Loyalty</h2>
+                    <p>You've earned 150 points this month!</p>
+                </div>
+                <div class="dash-card" style="text-align: center; padding: 40px; border: 2px dashed var(--secondary);">
+                    <div style="font-size: 3rem; font-weight: 800; color: var(--secondary); margin-bottom: 8px;">1,240 pts</div>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px;">Unlock a ₹150 discount on your next order</p>
+                    <button class="btn-primary">Redeem Points</button>
+                </div>
+            </div>
+
+            <!-- PANEL 5: SUBSCRIPTION BOX -->
+            <div class="dash-panel" id="box">
+                <div class="panel-header">
+                    <h2>Subscription Box</h2>
+                    <p>Your May curated collection</p>
+                </div>
+                <div class="dash-card" style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="width: 200px; height: 200px; background: var(--bg-alt); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="package" style="width: 100px; height: 100px; color: var(--primary); opacity: 0.2;"></i>
+                    </div>
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3>📦 The "Healthy Spring" Box</h3>
+                        <p style="color: var(--text-secondary); margin: 8px 0 20px;">Shipping on May 5th via Express Delivery</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+                            <div style="display: flex; gap: 10px; align-items: center;"><i data-lucide="check-circle" style="width: 16px; color: var(--secondary);"></i> Organic Turkey Bites</div>
+                            <div style="display: flex; gap: 10px; align-items: center;"><i data-lucide="check-circle" style="width: 16px; color: var(--secondary);"></i> Dental Chew Toy</div>
+                            <div style="display: flex; gap: 10px; align-items: center;"><i data-lucide="check-circle" style="width: 16px; color: var(--secondary);"></i> Skin & Coat Oil</div>
+                            <div style="display: flex; gap: 10px; align-items: center;"><i data-lucide="check-circle" style="width: 16px; color: var(--secondary);"></i> Hemp Rope Knot</div>
+                        </div>
+                        <button class="btn-primary" style="margin-top: 24px;">Customize Next Box</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 6: ACCOUNT SETTINGS -->
+            <div class="dash-panel" id="profile">
+                <div class="panel-header">
+                    <h2>Account Settings</h2>
+                    <p>Manage your profile, addresses, and payments</p>
+                </div>
+                <div class="dash-grid-2">
+                    <div class="dash-card">
+                        <h3>Personal Profile</h3>
+                        <form style="display: flex; flex-direction: column; gap: 16px; margin-top: 20px;">
+                            <div style="display: flex; gap: 16px;">
+                                <div style="flex: 1;"><label style="display: block; font-size: 0.85rem; margin-bottom: 6px;">First Name</label><input type="text" class="form-control" value="Arjun" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px;"></div>
+                                <div style="flex: 1;"><label style="display: block; font-size: 0.85rem; margin-bottom: 6px;">Last Name</label><input type="text" class="form-control" value="Kumar" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px;"></div>
+                            </div>
+                            <div><label style="display: block; font-size: 0.85rem; margin-bottom: 6px;">Email Address</label><input type="email" class="form-control" value="arjun@email.com" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px;"></div>
+                            <button type="button" class="btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+                    <div class="dash-card">
+                        <h3>Delivery Address</h3>
+                        <div class="dash-card" style="border: 1px solid var(--primary-light); background: var(--bg-alt); margin-top: 16px;">
+                            <span class="badge badge-delivered" style="margin-bottom: 8px;">Default</span>
+                            <p style="font-size: 0.9rem; font-weight: 600;">Arjun Kumar</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">14/2 Gandhi Nagar, Coimbatore - 641009, TN</p>
+                            <button class="btn-secondary" style="margin-top: 10px; font-size: 0.8rem;">Edit Address</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-card" style="margin-top: 30px;">
+                    <h3>Saved Payments</h3>
+                    <div class="payment-methods-stack">
+                        <div class="payment-item">
+                            <div class="payment-item-details">
+                                <i data-lucide="credit-card" style="width: 24px;"></i>
+                                <span>Visa ending in <strong>4242</strong></span>
+                            </div>
+                            <button class="btn-secondary remove-btn">Remove</button>
+                        </div>
+                        <button class="btn-primary add-card-btn">+ Add New Card</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 8: HELP & SUPPORT -->
+            <div class="dash-panel" id="help">
+                <div class="panel-header">
+                    <h2>Help & Support</h2>
+                    <p>We're here for you and your pets</p>
+                </div>
+                <div class="dash-grid-2">
+                    <div class="dash-card">
+                        <h3>Frequently Asked Questions</h3>
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+                            <div style="padding: 12px; background: var(--bg-alt); border-radius: 8px; cursor: pointer;">
+                                <strong>How do I skip a month's box?</strong>
+                            </div>
+                            <div style="padding: 12px; background: var(--bg-alt); border-radius: 8px; cursor: pointer;">
+                                <strong>Can I change my pet's dietary preferences?</strong>
+                            </div>
+                            <div style="padding: 12px; background: var(--bg-alt); border-radius: 8px; cursor: pointer;">
+                                <strong>What is the return policy for toys?</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-card">
+                        <h3>Contact Support</h3>
+                        <p style="margin-bottom: 20px;">Need immediate help? Our team is online.</p>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <button class="btn-primary" style="width: 100%;"><i data-lucide="message-square" style="width: 16px; margin-right: 8px;"></i> Start Live Chat</button>
+                            <button class="btn-secondary" style="width: 100%;"><i data-lucide="mail" style="width: 16px; margin-right: 8px;"></i> Email support@pawstore.in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

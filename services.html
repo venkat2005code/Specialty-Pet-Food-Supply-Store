@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Premium Pet Products | PawStore</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M30,50 Q20,30 40,20 Q60,10 70,30 Q80,50 60,70 Q40,90 30,70 Z' fill='%231E1B4B'/></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <i data-lucide="paw-print"></i> PawStore
+            </a>
+
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li class="nav-item-has-dropdown">
+                        <a href="index.html" class="nav-link">Home <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="index.html">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html">Home 2 (Premium)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html" class="nav-link active">Shop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item-has-dropdown">
+                        <a href="dashboard.html" class="nav-link">Dashboards <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                            <li><a href="dashboard.html">User Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+                    RTL / LTR
+                </button>
+                <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link" onclick="toggleMobileMenu()">Home 1</a></li>
+                <li><a href="home2.html" class="nav-link" onclick="toggleMobileMenu()">Home 2</a></li>
+                <li><a href="services.html" class="nav-link active" onclick="toggleMobileMenu()">Shop</a></li>
+                <li><a href="about.html" class="nav-link" onclick="toggleMobileMenu()">About</a></li>
+                <li><a href="pricing.html" class="nav-link" onclick="toggleMobileMenu()">Pricing</a></li>
+                <li><a href="admin-dashboard.html" class="nav-link" onclick="toggleMobileMenu()">Admin Dashboard</a>
+                </li>
+                <li><a href="dashboard.html" class="nav-link" onclick="toggleMobileMenu()">User Dashboard</a></li>
+            </ul>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <div class="mobile-toggles">
+                    <button class="icon-btn" onclick="toggleRTL()">
+                        RTL / LTR
+                    </button>
+                    <button class="icon-btn" onclick="toggleTheme()">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="shop-hero">
+            <div class="container">
+                <h1>Shop Premium Pet Products</h1>
+                <p>5,000+ vet-approved products for every pet and every need</p>
+                <div class="hero__btns">
+                    <button class="btn-primary">Browse All Products</button>
+                    <button class="btn-secondary">View Deals</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Breadcrumb + Results -->
+        <div class="breadcrumb-bar">
+            <div class="container breadcrumb-bar__container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> › <span class="active">Shop</span>
+                </div>
+                <div class="results-info">
+                    Showing 12 of 120 products
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Shop Layout -->
+        <section class="shop-content">
+            <div class="container">
+                <button class="btn-secondary mobile-filter-trigger" onclick="toggleSidebar()">
+                    <i data-lucide="filter" style="width: 16px; display: inline-block; vertical-align: middle;"></i>
+                    Filters
+                </button>
+                <div class="shop-layout">
+                    <!-- LEFT Sidebar -->
+                    <aside class="filter-sidebar">
+                        <button class="close-sidebar-btn" onclick="toggleSidebar()">&times;</button>
+                        <div class="sidebar-sticky">
+                            <div class="filter-block">
+                                <h3>Search</h3>
+                                <div class="search-wrapper">
+                                    <i data-lucide="search"></i>
+                                    <input type="text" class="search-input" placeholder="Search products...">
+                                </div>
+                            </div>
+
+                            <div class="filter-block">
+                                <h3>Category</h3>
+                                <ul class="filter-list">
+                                    <li class="filter-item"><input type="checkbox" checked> All Products</li>
+                                    <li class="filter-item"><input type="checkbox"> Dog Food</li>
+                                    <li class="filter-item"><input type="checkbox"> Cat Food</li>
+                                    <li class="filter-item"><input type="checkbox"> Bird & Small Pets</li>
+                                    <li class="filter-item"><input type="checkbox"> Grooming</li>
+                                    <li class="filter-item"><input type="checkbox"> Toys & Accessories</li>
+                                    <li class="filter-item"><input type="checkbox"> Health & Wellness</li>
+                                </ul>
+                            </div>
+
+                            <div class="filter-block">
+                                <h3>Price Range</h3>
+                                <div class="price-slider-wrapper">
+                                    <input type="range" id="priceRange" class="price-slider" min="0" max="5000"
+                                        value="5000">
+                                    <span class="price-values" id="priceValue">₹0 — ₹5,000</span>
+                                </div>
+                            </div>
+
+                            <div class="filter-block">
+                                <h3>Pet Type</h3>
+                                <div class="pet-type-pills">
+                                    <button class="pill-btn active">All</button>
+                                    <button class="pill-btn">Dogs</button>
+                                    <button class="pill-btn">Cats</button>
+                                    <button class="pill-btn">Birds</button>
+                                    <button class="pill-btn">Small Pets</button>
+                                </div>
+                            </div>
+
+                            <div class="filter-block">
+                                <h3>Minimum Rating</h3>
+                                <div class="rating-filter-list">
+                                    <div class="rating-item">
+                                        <span class="stars">★★★★★</span> & above
+                                    </div>
+                                    <div class="rating-item">
+                                        <span class="stars">★★★★☆</span> & above
+                                    </div>
+                                    <div class="rating-item">
+                                        <span class="stars">★★★☆☆</span> & above
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn-secondary" onclick="clearAllFilters()" style="width: 100%;">Clear All
+                                Filters</button>
+                        </div>
+                    </aside>
+
+                    <!-- RIGHT Product Grid Area -->
+                    <div class="shop-main">
+                        <div class="shop-top-bar">
+                            <h3 id="productCount">12 Products Found</h3>
+                            <div class="sort-wrapper">
+                                <label style="font-size: 0.875rem; color: var(--text-muted);">Sort by: </label>
+                                <select class="sort-select">
+                                    <option value="featured">Featured</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="rating">Best Rated</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="products-grid">
+                            <!-- Card 1 -->
+                            <div class="product-card-adv" data-category="Dog Food" data-pet="Dogs" data-price="1299"
+                                data-rating="5">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Dog Food</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Royal Canin Adult Maxi</h3>
+                                    <p class="card-desc">Premium nutrition for large breed adult dogs.</p>
+                                    <div class="card-rating">★★★★★</div>
+                                    <p class="card-price">₹1,299</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="product-card-adv" data-category="Cat Food" data-pet="Cats" data-price="499"
+                                data-rating="4">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Cat Food</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Whiskas Ocean Fish</h3>
+                                    <p class="card-desc">Balanced and delicious tuna for adult cats.</p>
+                                    <div class="card-rating">★★★★☆</div>
+                                    <p class="card-price">₹499</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="product-card-adv" data-category="Dog Food" data-pet="Dogs" data-price="899"
+                                data-rating="5">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2027091484-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Dog Food</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Drools Focus Adult</h3>
+                                    <p class="card-desc">High protein formula for active dogs.</p>
+                                    <div class="card-rating">★★★★★</div>
+                                    <p class="card-price">₹899</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="product-card-adv" data-category="Cat Food" data-pet="Cats" data-price="349"
+                                data-rating="4">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Cat Food</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Me-O Tuna Flavour</h3>
+                                    <p class="card-desc">Tuna flavour cat food with taurine.</p>
+                                    <div class="card-rating">★★★★☆</div>
+                                    <p class="card-price">₹349</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="product-card-adv" data-category="Toys & Accessories" data-pet="Dogs"
+                                data-price="799" data-rating="5">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Toys</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Kong Classic Toy (L)</h3>
+                                    <p class="card-desc">Durable rubber toy for heavy chewers.</p>
+                                    <div class="card-rating">★★★★★</div>
+                                    <p class="card-price">₹799</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="product-card-adv" data-category="Grooming" data-pet="Dogs" data-price="299"
+                                data-rating="4">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2232665282-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Grooming</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Himalaya Erina Shampoo</h3>
+                                    <p class="card-desc">Anti-dandruff and anti-itch shampoo.</p>
+                                    <div class="card-rating">★★★★☆</div>
+                                    <p class="card-price">₹299</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 7 -->
+                            <div class="product-card-adv" data-category="Dog Food" data-pet="Dogs" data-price="749"
+                                data-rating="4">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2251625835-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Dog Food</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Pedigree Adult Chicken</h3>
+                                    <p class="card-desc">Complete and balanced nutrition.</p>
+                                    <div class="card-rating">★★★★☆</div>
+                                    <p class="card-price">₹749</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="product-card-adv" data-category="Health & Wellness" data-pet="All"
+                                data-price="649" data-rating="5">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Health</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Beaphar Vitamin Drops</h3>
+                                    <p class="card-desc">Multi-vitamin supplement for overall health.</p>
+                                    <div class="card-rating">★★★★★</div>
+                                    <p class="card-price">₹649</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div class="product-card-adv" data-category="Toys & Accessories" data-pet="Cats"
+                                data-price="1199" data-rating="4">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Toys</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Trixie Activity Board</h3>
+                                    <p class="card-desc">Interactive strategy game for cats.</p>
+                                    <div class="card-rating">★★★★☆</div>
+                                    <p class="card-price">₹1,199</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div class="product-card-adv" data-category="Cat Food" data-pet="Cats" data-price="299"
+                                data-rating="4">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Cat Food</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Purepet Ocean Fish</h3>
+                                    <p class="card-desc">Nutrient rich tuna and sardine meal.</p>
+                                    <div class="card-rating">★★★★☆</div>
+                                    <p class="card-price">₹299</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 11 -->
+                            <div class="product-card-adv" data-category="Health & Wellness" data-pet="All"
+                                data-price="349" data-rating="5">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2251625835-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Health</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Pet-Dent Toothbrush Kit</h3>
+                                    <p class="card-desc">Complete dental hygiene for dogs and cats.</p>
+                                    <div class="card-rating">★★★★★</div>
+                                    <p class="card-price">₹349</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!-- Card 12 -->
+                            <div class="product-card-adv" data-category="Bird & Small Pets" data-pet="Small Pets"
+                                data-price="2499" data-rating="4">
+                                <div class="card-image-area"
+                                    style="background-image: url('images/gettyimages-2027091484-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                                    <span class="category-badge">Bird & Small Pets</span>
+                                    <button class="wishlist-btn"><i data-lucide="heart"></i></button>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Savic Hamster Cage</h3>
+                                    <p class="card-desc">Spacious and safe home for small pets.</p>
+                                    <div class="card-rating">★★★★☆</div>
+                                    <p class="card-price">₹2,499</p>
+                                    <button class="btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="page-btn">←</button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <button class="page-btn">4</button>
+                            <button class="page-btn">5</button>
+                            <button class="page-btn">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Deals Banner -->
+        <section class="deals-banner">
+            <div class="container">
+                <div class="deals-grid">
+                    <div class="deals-left">
+                        <span class="deal-badge">⚡ Limited Time</span>
+                        <h2>Up to 40% Off on Premium Dog Food</h2>
+                        <p>Valid until stocks last. Use code: PAWSTORE40</p>
+                        <button class="btn-secondary">Claim Offer</button>
+                    </div>
+                    <div class="deals-right"
+                        style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Recently Viewed / Recommended -->
+        <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url('images/gettyimages-1265237454-612x612.jpg'); text-align: center; justify-content: center;">
+            <div class="container" style="width: 100%;">
+                <div class="section-header" style="margin-left: auto; margin-right: auto;">
+                    <h2>You Might Also Like</h2>
+                    <p>Based on popular choices from pet parents like you</p>
+                </div>
+                <div class="product-grid" style="justify-content: center;"> <!-- Reusing 4-col grid style from home -->
+                    <div class="product-card-adv" data-price="599">
+                        <div class="card-image-area"
+                            style="background-image: url('images/gettyimages-2232665282-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                        </div>
+                        <div class="card-body">
+                            <h3>Drools Puppy Starter</h3>
+                            <p class="card-desc">Ideal transition food for puppies.</p>
+                            <div class="card-rating">★★★★★</div>
+                            <p class="card-price">₹599</p>
+                            <button class="btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card-adv" data-price="899">
+                        <div class="card-image-area"
+                            style="background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                        </div>
+                        <div class="card-body">
+                            <h3>Catit Grooming Kit</h3>
+                            <p class="card-desc">Professional tools for cat grooming.</p>
+                            <div class="card-rating">★★★★★</div>
+                            <p class="card-price">₹899</p>
+                            <button class="btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card-adv" data-price="3499">
+                        <div class="card-image-area"
+                            style="background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                        </div>
+                        <div class="card-body">
+                            <h3>Trixie Cat Tree</h3>
+                            <p class="card-desc">Multi-level scratching post and bed.</p>
+                            <div class="card-rating">★★★★★</div>
+                            <p class="card-price">₹3,499</p>
+                            <button class="btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card-adv" data-price="249">
+                        <div class="card-image-area"
+                            style="background-image: url('images/gettyimages-2251625835-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
+                        </div>
+                        <div class="card-body">
+                            <h3>Beaphar Worming Tabs</h3>
+                            <p class="card-desc">Effective worming for adult cats.</p>
+                            <div class="card-rating">★★★★★</div>
+                            <p class="card-price">₹249</p>
+                            <button class="btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 48px;">
+                    <button class="btn-primary"
+                        style="padding: 16px 40px; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">Explore
+                        All Recommendations</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md);">
+                        <i data-lucide="paw-print"></i> PawStore
+                    </a>
+                    <p>Your one-stop destination for premium specialty pet food and supplies in India.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Coimbatore, Tamil Nadu</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>✉ hello@pawstore.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PawStore. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="caption">Privacy Policy</a>
+                    <a href="#" class="caption">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

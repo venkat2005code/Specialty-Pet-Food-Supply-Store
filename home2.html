@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Pet Care Experience | PawStore</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M30,50 Q20,30 40,20 Q60,10 70,30 Q80,50 60,70 Q40,90 30,70 Z' fill='%231E1B4B'/></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <i data-lucide="paw-print"></i> PawStore
+            </a>
+            
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li class="nav-item-has-dropdown">
+                        <a href="home2.html" class="nav-link active">Home <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="index.html">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html">Home 2 (Premium)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html" class="nav-link">Shop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item-has-dropdown">
+                        <a href="dashboard.html" class="nav-link">Dashboards <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                            <li><a href="dashboard.html">User Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+                    RTL / LTR
+                </button>
+                <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link" onclick="toggleMobileMenu()">Home 1</a></li>
+                <li><a href="home2.html" class="nav-link active" onclick="toggleMobileMenu()">Home 2</a></li>
+                <li><a href="services.html" class="nav-link" onclick="toggleMobileMenu()">Shop</a></li>
+                <li><a href="about.html" class="nav-link" onclick="toggleMobileMenu()">About</a></li>
+                <li><a href="pricing.html" class="nav-link" onclick="toggleMobileMenu()">Pricing</a></li>
+                <li><a href="admin-dashboard.html" class="nav-link" onclick="toggleMobileMenu()">Admin Dashboard</a></li>
+                <li><a href="dashboard.html" class="nav-link" onclick="toggleMobileMenu()">User Dashboard</a></li>
+            </ul>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <div class="mobile-toggles">
+                    <button class="icon-btn" onclick="toggleRTL()">
+                        RTL / LTR
+                    </button>
+                    <button class="icon-btn" onclick="toggleTheme()">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 1: Hero (Split Layout) -->
+        <section class="hero-premium">
+            <div class="container">
+                <div class="hero-premium__grid">
+                    <div class="hero-content">
+                        <span class="hero-badge">🐾 India's #1 Pet Specialty Store</span>
+                        <h1>Give Your Pet the Life They Deserve</h1>
+                        <p>Shop 5,000+ premium products curated by vets and pet nutrition experts. Delivered to your door in 24 hours.</p>
+                        <div class="hero__btns" style="justify-content: flex-start;">
+                            <a href="services.html" class="btn-primary">Shop Premium Range</a>
+                            <a href="pricing.html" class="btn-secondary">View Membership Plans</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">5,000+ Products</div>
+                            <div class="stat-item">10K+ Happy Pets</div>
+                            <div class="stat-item">Same-Day Delivery</div>
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="images/gettyimages-2268564039-612x612.jpg" alt="Happy pets with premium products">
+                        <div class="hero-badge" style="position: absolute; bottom: 20px; left: -20px; background: white; padding: 15px 25px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 15px; color: var(--text-primary);">
+                            <div style="width: 40px; height: 40px; background: var(--secondary-light); color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight: 700; font-size: 1.1rem;">Loved by 10k+ Pets</div>
+                                <div style="font-size: 0.8rem; color: var(--text-secondary);">Across all of India</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Marquee Brand Strip -->
+        <div class="marquee-container">
+            <div class="marquee-header">Trusted Brands We Carry</div>
+            <div class="marquee-content">
+                <span class="marquee-item">Royal Canin</span>
+                <span class="marquee-item">Whiskas</span>
+                <span class="marquee-item">Pedigree</span>
+                <span class="marquee-item">Drools</span>
+                <span class="marquee-item">Me-O</span>
+                <span class="marquee-item">Kong</span>
+                <span class="marquee-item">Himalaya Pet</span>
+                <span class="marquee-item">Beaphar</span>
+                <span class="marquee-item">Trixie</span>
+                <span class="marquee-item">Purepet</span>
+                <!-- Duplicate for seamless scroll -->
+                <span class="marquee-item">Royal Canin</span>
+                <span class="marquee-item">Whiskas</span>
+                <span class="marquee-item">Pedigree</span>
+                <span class="marquee-item">Drools</span>
+                <span class="marquee-item">Me-O</span>
+                <span class="marquee-item">Kong</span>
+                <span class="marquee-item">Himalaya Pet</span>
+                <span class="marquee-item">Beaphar</span>
+                <span class="marquee-item">Trixie</span>
+                <span class="marquee-item">Purepet</span>
+            </div>
+        </div>
+
+        <!-- Section 3: Featured Collection (Bento Grid) -->
+        <section class="premium-collections">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Premium Collections</h2>
+                    <p>Handpicked for health, happiness, and quality</p>
+                </div>
+                <div class="bento-grid">
+                    <a href="services.html" class="bento-card large">
+                        <div class="bg-img" style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="content">
+                            <h3>Nutrition First</h3>
+                            <p>Premium dog food collection</p>
+                            <span class="btn-primary">Shop Dogs</span>
+                        </div>
+                    </a>
+                    <a href="services.html" class="bento-card medium-primary">
+                        <div class="bg-img" style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                        <div class="content">
+                            <h3>Feline Favourites</h3>
+                            <p>Exclusive cat collection</p>
+                            <span class="blog-link">Shop Now →</span>
+                        </div>
+                    </a>
+                    <a href="services.html" class="bento-card medium-secondary">
+                        <div class="bg-img" style="background-image: url('images/gettyimages-2027091484-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                        <div class="content">
+                            <h3>Tiny Paws</h3>
+                            <p>For your small companions</p>
+                            <span class="blog-link">Shop Now →</span>
+                        </div>
+                    </a>
+                    <a href="services.html" class="bento-card wide">
+                        <div class="bg-img" style="background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                        <div class="content">
+                            <h3>Grooming Essentials</h3>
+                            <p>Professional tools for home care</p>
+                            <span class="btn-secondary">Explore Collection</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: How It Works -->
+        <section class="how-it-works" style="background: var(--bg-alt);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shopping with PawStore is Simple</h2>
+                    <p>From browse to bowl in just a few steps</p>
+                </div>
+                <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-icon-v2"><i data-lucide="search"></i></div>
+                            <h3>Browse & Discover</h3>
+                            <p>Explore 5,000+ vet-approved products</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-icon-v2"><i data-lucide="shopping-cart"></i></div>
+                            <h3>Add to Cart</h3>
+                            <p>Build your perfect pet care bundle</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-icon-v2"><i data-lucide="truck"></i></div>
+                            <h3>Fast Delivery</h3>
+                            <p>Delivered to your door in 24 hours</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-icon-v2"><i data-lucide="heart"></i></div>
+                            <h3>Happy Pets</h3>
+                            <p>Watch your pet thrive with premium nutrition</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Subscription Boxes -->
+        <section class="subscription-boxes">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Monthly Pet Care Boxes</h2>
+                    <p>Curated surprise boxes delivered every month</p>
+                </div>
+                <div class="sub-grid">
+                    <div class="sub-card">
+                        <h3>Pup Box</h3>
+                        <div class="sub-price">₹599/mo</div>
+                        <p>Toys, treats & grooming essentials for your dog</p>
+                        <button class="btn-secondary" style="width: 100%; margin-top: var(--space-md);">Subscribe</button>
+                    </div>
+                    <div class="sub-card popular">
+                        <span class="popular-badge">⭐ Most Popular</span>
+                        <h3>Kitty Box</h3>
+                        <div class="sub-price">₹499/mo</div>
+                        <p>Premium treats and playthings for your feline friend</p>
+                        <button class="btn-primary" style="width: 100%; margin-top: var(--space-md);">Subscribe Now</button>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Mixed Paws Box</h3>
+                        <div class="sub-price">₹799/mo</div>
+                        <p>Perfect for multi-pet homes — dogs, cats & more</p>
+                        <button class="btn-secondary" style="width: 100%; margin-top: var(--space-md);">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Pet Care Blog -->
+        <section class="pet-blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pet Care Tips & Insights</h2>
+                    <p>Expert advice from our in-house vet team</p>
+                </div>
+                <div class="testimonial-grid"> <!-- Reusing grid utility -->
+                    <div class="blog-card">
+                        <div class="blog-banner" style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;"></div>
+                        <div class="blog-content">
+                            <span class="tag-badge">Nutrition</span>
+                            <h3>10 Signs Your Dog Needs a Diet Change</h3>
+                            <span class="read-time">3 min read</span>
+                            <a href="#" class="blog-link">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-banner" style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;"></div>
+                        <div class="blog-content">
+                            <span class="tag-badge">Grooming</span>
+                            <h3>How to Choose the Right Cat Litter</h3>
+                            <span class="read-time">2 min read</span>
+                            <a href="#" class="blog-link">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-banner" style="background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;"></div>
+                        <div class="blog-content">
+                            <span class="tag-badge">Health</span>
+                            <h3>Supplements Every Senior Pet Needs</h3>
+                            <span class="read-time">4 min read</span>
+                            <a href="#" class="blog-link">Read Article →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-cta">
+                    <button class="btn-secondary">View All Articles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Social Proof Counter -->
+        <div class="counter-strip">
+            <div class="container">
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="12000">0</span>
+                        <span class="counter-label">Happy Pet Parents</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="50000">0</span>
+                        <span class="counter-label">Orders Delivered</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="5">0</span>
+                        <span class="counter-label">Average Rating</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="500">0</span>
+                        <span class="counter-label">Premium Brands</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 8: Newsletter + App -->
+        <section class="newsletter-app-section">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="newsletter-app-col">
+                        <h3>Stay in the Loop</h3>
+                        <p>Deals, tips, and new arrivals straight to your inbox</p>
+                        <form class="newsletter-form" style="max-width: 100%;">
+                            <input type="email" placeholder="Enter your email" required style="border: 1px solid var(--border);">
+                            <button type="submit" class="btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="vertical-divider"></div>
+                    <div class="newsletter-app-col">
+                        <h3>Shop on the Go</h3>
+                        <p>Download the PawStore app for exclusive app-only deals</p>
+                        <div class="download-badges">
+                            <button class="btn-secondary"><i data-lucide="smartphone" style="width: 16px; margin-right: 4px; vertical-align: middle;"></i> App Store</button>
+                            <button class="btn-secondary"><i data-lucide="play" style="width: 16px; margin-right: 4px; vertical-align: middle;"></i> Google Play</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Section 9: Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md);">
+                        <i data-lucide="paw-print"></i> PawStore
+                    </a>
+                    <p>Your one-stop destination for premium specialty pet food and supplies in India.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Coimbatore, Tamil Nadu</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>✉ hello@pawstore.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PawStore. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="caption">Privacy Policy</a>
+                    <a href="#" class="caption">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

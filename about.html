@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Story | PawStore</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M30,50 Q20,30 40,20 Q60,10 70,30 Q80,50 60,70 Q40,90 30,70 Z' fill='%231E1B4B'/></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <i data-lucide="paw-print"></i> PawStore
+            </a>
+            
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li class="nav-item-has-dropdown">
+                        <a href="index.html" class="nav-link">Home <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="index.html">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html">Home 2 (Premium)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html" class="nav-link">Shop</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item-has-dropdown">
+                        <a href="dashboard.html" class="nav-link">Dashboards <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                            <li><a href="dashboard.html">User Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+                    RTL / LTR
+                </button>
+                <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link" onclick="toggleMobileMenu()">Home 1</a></li>
+                <li><a href="home2.html" class="nav-link" onclick="toggleMobileMenu()">Home 2</a></li>
+                <li><a href="services.html" class="nav-link" onclick="toggleMobileMenu()">Shop</a></li>
+                <li><a href="about.html" class="nav-link active" onclick="toggleMobileMenu()">About</a></li>
+                <li><a href="pricing.html" class="nav-link" onclick="toggleMobileMenu()">Pricing</a></li>
+                <li><a href="admin-dashboard.html" class="nav-link" onclick="toggleMobileMenu()">Admin Dashboard</a></li>
+                <li><a href="dashboard.html" class="nav-link" onclick="toggleMobileMenu()">User Dashboard</a></li>
+            </ul>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <div class="mobile-toggles">
+                    <button class="icon-btn" onclick="toggleRTL()">
+                        RTL / LTR
+                    </button>
+                    <button class="icon-btn" onclick="toggleTheme()">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 1: Page Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <h1>We're on a Mission to Keep Pets Happy & Healthy</h1>
+                <p>Founded by pet lovers, built for pet parents — PawStore is India's most trusted specialty pet store.</p>
+                <button class="btn-primary">Meet Our Team</button>
+            </div>
+        </section>
+
+        <!-- Section 2: Our Story -->
+        <section class="our-story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2>From a Small Pet Shop to India's Favourite Pet Store</h2>
+                        <p>PawStore started in 2018 in a small shop in Coimbatore, Tamil Nadu. Our founder, a lifelong dog lover, struggled to find premium, vet-approved food for his Labrador, Bruno. That frustration became the spark that started it all.</p>
+                        <p>What began as a single storefront has grown into an online platform serving 12,000+ pet parents across India. Every product we carry is hand-selected by our in-house veterinary team to ensure safety, nutrition, and quality.</p>
+                        <p>Today, PawStore is more than a store — it's a community of people who believe pets deserve the very best. We're proud to be part of your pet's journey.</p>
+                        <a href="services.html" class="btn-primary" style="align-self: flex-start;">Shop Our Products</a>
+                    </div>
+                    <div class="story-image">
+                        <img src="images/gettyimages-2027091484-612x612.jpg" alt="Pet Store Heritage">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Mission & Values -->
+        <section class="mission-values" style="background: var(--bg-alt);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What We Stand For</h2>
+                    <p>The values that guide every product we pick and every decision we make</p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><i data-lucide="heart"></i></div>
+                        <h3>Pet First Always</h3>
+                        <p>Every product is evaluated from the pet's perspective — safety, nutrition, and joy come first.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i data-lucide="flask-conical"></i></div>
+                        <h3>Science-Backed Quality</h3>
+                        <p>Our vet team reviews every product before it reaches our shelves. No compromises on health.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i data-lucide="leaf"></i></div>
+                        <h3>Sustainable Sourcing</h3>
+                        <p>We partner with brands that care about the planet as much as they care about pets.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i data-lucide="users"></i></div>
+                        <h3>Community First</h3>
+                        <p>We donate 1% of every sale to animal shelters and rescue organizations across India.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Key Milestones (Timeline) -->
+        <section class="our-journey">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Journey So Far</h2>
+                    <p>From one shop to thousands of happy pet families</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2018</span>
+                            <h3>First Store Opens</h3>
+                            <p>PawStore opens its first physical store in Coimbatore, Tamil Nadu.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2019</span>
+                            <h3>Launch of Online Store</h3>
+                            <p>Launched online store and reached 500 orders in the first month.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2020</span>
+                            <h3>State-wide Expansion</h3>
+                            <p>Expanded to 10+ cities across Tamil Nadu during the pandemic.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2021</span>
+                            <h3>Global Partnerships</h3>
+                            <p>Partnered with 100+ premium pet brands including Royal Canin.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2022</span>
+                            <h3>Mobile App Launch</h3>
+                            <p>Crossed 5,000 active customers and launched the mobile app.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2023</span>
+                            <h3>Subscription Boxes</h3>
+                            <p>Launched monthly subscription boxes — Pup Box & Kitty Box.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2024</span>
+                            <h3>10,000+ Pet Parents</h3>
+                            <p>Reached 10,000+ happy pet parents across India.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-card">
+                            <span class="timeline-year">2025</span>
+                            <h3>Experience Centre</h3>
+                            <p>Opened first PawStore experience centre in Coimbatore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Meet the Team -->
+        <section class="team" style="background: var(--bg-alt);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The Humans Behind PawStore</h2>
+                    <p>A team of pet lovers, vets, and nutrition experts</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="images/team-founder.png" alt="Karthik Rajan" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%;">
+                        </div>
+                        <span class="team-name">Karthik Rajan</span>
+                        <span class="team-role">Founder & CEO</span>
+                        <p>Dog dad to Bruno. Obsessed with pet nutrition and building the best pet store in India.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="images/team-vet.png" alt="Dr. Meena Suresh" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%;">
+                        </div>
+                        <span class="team-name">Dr. Meena Suresh</span>
+                        <span class="team-role">Chief Veterinarian</span>
+                        <p>12 years of experience. Reviews every product before it hits our shelves.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="images/team-ops.png" alt="Priya Nair" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%;">
+                        </div>
+                        <span class="team-name">Priya Nair</span>
+                        <span class="team-role">Head of Operations</span>
+                        <p>Ensures your order reaches you in perfect condition, every single time.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <img src="images/team-expert.png" alt="Arjun Pillai" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%;">
+                        </div>
+                        <span class="team-name">Arjun Pillai</span>
+                        <span class="team-role">Nutrition Expert</span>
+                        <p>Helping pet parents make the best food choices for their beloved animals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Our Impact -->
+        <div class="counter-strip">
+            <div class="container">
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="12000">0</span>
+                        <span class="counter-label">Pet Families Served</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="500">0</span>
+                        <span class="counter-label">Premium Brands</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="50000">0</span>
+                        <span class="counter-label">Orders Delivered</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="500000">0</span>
+                        <span class="counter-label">Donated to Shelters (₹)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7: Partnerships -->
+        <section class="partnerships">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trusted by Leading Pet Brands</h2>
+                    <p>We only stock what the best brands in the world stand behind</p>
+                </div>
+                <div class="pills-container">
+                    <span class="brand-pill">Royal Canin</span>
+                    <span class="brand-pill">Whiskas</span>
+                    <span class="brand-pill">Pedigree</span>
+                    <span class="brand-pill">Drools</span>
+                    <span class="brand-pill">Me-O</span>
+                    <span class="brand-pill">Kong</span>
+                    <span class="brand-pill">Himalaya Pet</span>
+                    <span class="brand-pill">Beaphar</span>
+                    <span class="brand-pill">Trixie</span>
+                    <span class="brand-pill">Purepet</span>
+                </div>
+                <div class="certifications-container">
+                    <span class="cert-badge">✅ ISO Certified</span>
+                    <span class="cert-badge">🏥 Vet Approved</span>
+                    <span class="cert-badge">🌿 Cruelty Free</span>
+                    <span class="cert-badge">🔒 Secure Payments</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: CTA Banner -->
+        <section class="cta-banner-gradient" style="padding: 100px 0;">
+            <div class="container">
+                <div class="cta-banner-grid">
+                    <div class="cta-content">
+                        <h2>Ready to Give Your Pet the Best?</h2>
+                        <p>Join 12,000+ pet parents who trust PawStore for premium nutrition and care.</p>
+                        <div class="hero__btns" style="justify-content: flex-start; margin-top: var(--space-lg);">
+                            <a href="services.html" class="btn-primary">Shop Now</a>
+                            <a href="pricing.html" class="btn-secondary">View Membership Plans</a>
+                        </div>
+                    </div>
+                    <div class="cta-emojis">
+                        <span><i data-lucide="dog" style="width: 48px; height: 48px;"></i></span>
+                        <span><i data-lucide="cat" style="width: 48px; height: 48px;"></i></span>
+                        <span><i data-lucide="paw-print" style="width: 48px; height: 48px;"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md);">
+                        <i data-lucide="paw-print"></i> PawStore
+                    </a>
+                    <p>Your one-stop destination for premium specialty pet food and supplies in India.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Coimbatore, Tamil Nadu</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>✉ hello@pawstore.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PawStore. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="caption">Privacy Policy</a>
+                    <a href="#" class="caption">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

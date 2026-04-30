@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans & Pricing | PawStore</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M30,50 Q20,30 40,20 Q60,10 70,30 Q80,50 60,70 Q40,90 30,70 Z' fill='%231E1B4B'/></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <i data-lucide="paw-print"></i> PawStore
+            </a>
+            
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li class="nav-item-has-dropdown">
+                        <a href="index.html" class="nav-link">Home <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="index.html">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html">Home 2 (Premium)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html" class="nav-link">Shop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+                    <li class="nav-item-has-dropdown">
+                        <a href="dashboard.html" class="nav-link">Dashboards <i data-lucide="chevron-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
+                            <li><a href="dashboard.html">User Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
+                    RTL / LTR
+                </button>
+                <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="nav-link" onclick="toggleMobileMenu()">Home 1</a></li>
+                <li><a href="home2.html" class="nav-link" onclick="toggleMobileMenu()">Home 2</a></li>
+                <li><a href="services.html" class="nav-link" onclick="toggleMobileMenu()">Shop</a></li>
+                <li><a href="about.html" class="nav-link" onclick="toggleMobileMenu()">About</a></li>
+                <li><a href="pricing.html" class="nav-link active" onclick="toggleMobileMenu()">Pricing</a></li>
+                <li><a href="admin-dashboard.html" class="nav-link" onclick="toggleMobileMenu()">Admin Dashboard</a></li>
+                <li><a href="dashboard.html" class="nav-link" onclick="toggleMobileMenu()">User Dashboard</a></li>
+            </ul>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+                <div class="mobile-toggles">
+                    <button class="icon-btn" onclick="toggleRTL()">
+                        RTL / LTR
+                    </button>
+                    <button class="icon-btn" onclick="toggleTheme()">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 1: Page Hero -->
+        <section class="pricing-hero">
+            <div class="container">
+                <h1>Simple, Honest Pricing for Every Pet Parent</h1>
+                <p>Choose a membership that fits your pet's needs. Cancel anytime. No hidden fees.</p>
+                <div class="hero__btns">
+                    <button class="btn-primary">Start Free Trial</button>
+                    <button class="btn-secondary">Compare Plans</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Billing Toggle -->
+        <div class="billing-toggle-container">
+            <div class="container">
+                <div class="toggle-wrapper">
+                    <div class="toggle-option active" data-cycle="monthly">Monthly</div>
+                    <div class="toggle-option" data-cycle="yearly">Yearly <span class="save-badge">Save 20%</span></div>
+                </div>
+                <p id="billingNote" class="caption" style="margin-top: var(--space-sm);">All plans include a 7-day free trial. No credit card required.</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Pricing Cards -->
+        <section class="pricing-plans">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Choose Your PawStore Plan</h2>
+                    <p>Every plan includes free shipping on orders above ₹999</p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Basic -->
+                    <div class="pricing-card">
+                        <h3>Basic Paw</h3>
+                        <p class="tagline">Perfect for single-pet households just getting started</p>
+                        <div class="price">₹199<span>/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Access to 5,000+ products</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Free shipping (orders >₹999)</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Monthly newsletter & tips</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Email support (48hr)</li>
+                            <li class="disabled"><i data-lucide="x-circle" class="feature-cross"></i> Monthly subscription box</li>
+                            <li class="disabled"><i data-lucide="x-circle" class="feature-cross"></i> Priority support</li>
+                            <li class="disabled"><i data-lucide="x-circle" class="feature-cross"></i> Exclusive member discounts</li>
+                        </ul>
+                        <button class="btn-secondary">Get Started</button>
+                    </div>
+                    <!-- Popular -->
+                    <div class="pricing-card popular">
+                        <span class="popular-ribbon">⭐ Most Popular</span>
+                        <h3>Popular Paws</h3>
+                        <p class="tagline">Most loved by multi-pet households and deal hunters</p>
+                        <div class="price">₹499<span>/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Everything in Basic Paw</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> 10% discount on all orders</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Monthly subscription box</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Priority support (4hr)</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Early access to new arrivals</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Free grooming guide (PDF)</li>
+                            <li class="disabled"><i data-lucide="x-circle" class="feature-cross"></i> Dedicated pet nutritionist</li>
+                        </ul>
+                        <button class="btn-primary">Start Free Trial</button>
+                    </div>
+                    <!-- Premium -->
+                    <div class="pricing-card">
+                        <h3>Premium Paws</h3>
+                        <p class="tagline">For serious pet parents who want the absolute best</p>
+                        <div class="price">₹999<span>/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Everything in Popular Paws</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> 20% discount on all orders</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Dedicated pet nutritionist</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Free annual vet consultation</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Exclusive premium-only products</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Free birthday box for pet</li>
+                            <li><i data-lucide="check-circle-2" class="feature-check"></i> Free delivery on ALL orders</li>
+                        </ul>
+                        <button class="btn-secondary">Get Premium</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Comparison CTA Section -->
+        <section class="cta-banner-gradient" style="padding: var(--space-xl) 0; margin-bottom: var(--space-xl);">
+            <div class="container">
+                <div class="section-header" style="color: #FFFFFF;">
+                    <h2 style="color: #FFFFFF;">Compare All Features</h2>
+                    <p style="color: rgba(255,255,255,0.8);">Find the perfect balance of care and savings for your pet</p>
+                </div>
+                
+                <div class="table-wrapper" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.1); padding: var(--space-md); overflow-x: auto;">
+                    <table class="compare-table" style="width: 100%; border-collapse: collapse; color: #FFFFFF;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid rgba(255,255,255,0.1);">
+                                <th style="text-align: left; padding: 15px; color: #FFFFFF;">Feature</th>
+                                <th style="padding: 15px; color: #FFFFFF;">Basic Paw</th>
+                                <th style="padding: 15px; color: #FFFFFF; background: rgba(255,255,255,0.1); border-radius: 8px 8px 0 0;">Popular Paws</th>
+                                <th style="padding: 15px; color: #FFFFFF;">Premium Paws</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 15px;">Access to 5,000+ products</td>
+                                <td style="text-align: center;"><i data-lucide="check" style="color: #10B981;"></i></td>
+                                <td style="text-align: center; background: rgba(255,255,255,0.1);"><i data-lucide="check" style="color: #10B981;"></i></td>
+                                <td style="text-align: center;"><i data-lucide="check" style="color: #10B981;"></i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 15px;">Order discount</td>
+                                <td style="text-align: center; color: rgba(255,255,255,0.4);">None</td>
+                                <td style="text-align: center; background: rgba(255,255,255,0.1); font-weight: 700;">10%</td>
+                                <td style="text-align: center; font-weight: 700;">20%</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 15px;">Subscription Box</td>
+                                <td style="text-align: center;"><i data-lucide="x" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; background: rgba(255,255,255,0.1);"><i data-lucide="check" style="color: #10B981;"></i></td>
+                                <td style="text-align: center;"><i data-lucide="check" style="color: #10B981;"></i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 15px;">Nutritionist Access</td>
+                                <td style="text-align: center;"><i data-lucide="x" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; background: rgba(255,255,255,0.1);"><i data-lucide="x" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center;"><i data-lucide="check" style="color: #10B981;"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cta-actions" style="margin-top: var(--space-xl); display: flex; flex-direction: column; align-items: center; gap: var(--space-md);">
+                    <h3 style="color: #FFFFFF; font-size: 1.5rem;">Ready to give your pet the best?</h3>
+                    <div style="display: flex; gap: var(--space-md);">
+                        <a href="signup.html" class="btn-primary" style="background: #FFFFFF; color: var(--primary); border: none;">Get Started Now</a>
+                        <a href="#plans" class="btn-secondary" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">Back to Plans</a>
+                    </div>
+                    <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Join 12,000+ happy pet parents today.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Add-on Services -->
+        <section class="addons">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Enhance Your Plan with Add-Ons</h2>
+                    <p>Available to all members — pay only for what you need</p>
+                </div>
+                <div class="addons-grid">
+                    <div class="addon-card">
+                        <div class="addon-icon"><i data-lucide="stethoscope"></i></div>
+                        <h3>Vet Consultation</h3>
+                        <p class="price">₹299/session</p>
+                        <p>30-minute online consultation with a certified vet.</p>
+                        <button class="btn-secondary">Add to Plan</button>
+                    </div>
+                    <div class="addon-card">
+                        <div class="addon-icon"><i data-lucide="package"></i></div>
+                        <h3>Extra Subscription Box</h3>
+                        <p class="price">₹399/month</p>
+                        <p>Get an additional curated box for another pet.</p>
+                        <button class="btn-secondary">Add to Plan</button>
+                    </div>
+                    <div class="addon-card">
+                        <div class="addon-icon"><i data-lucide="scissors"></i></div>
+                        <h3>Grooming Session</h3>
+                        <p class="price">₹599/visit</p>
+                        <p>At-home professional grooming for dogs and cats.</p>
+                        <button class="btn-secondary">Add to Plan</button>
+                    </div>
+                    <div class="addon-card">
+                        <div class="addon-icon"><i data-lucide="utensils"></i></div>
+                        <h3>Custom Diet Plan</h3>
+                        <p class="price">₹799/plan</p>
+                        <p>Personalized nutrition plan crafted by our vet team.</p>
+                        <button class="btn-secondary">Add to Plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Testimonials -->
+        <section class="testimonials" style="background: var(--bg-alt);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Members Say</h2>
+                    <p>Real pet parents, real results</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>Switched to Popular Paws 6 months ago and haven't looked back. The box alone is worth it!</p>
+                        <span class="author">Divya R.</span>
+                        <div style="margin: 8px 0;">
+                            <span class="badge" style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 99px; font-size: 0.8rem;">Popular Paws Member ⭐</span>
+                        </div>
+                        <div class="rating">★★★★★</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>The Premium plan's vet consultation saved my cat's life. Worth every rupee spent.</p>
+                        <span class="author">Sanjay M.</span>
+                        <div style="margin: 8px 0;">
+                            <span class="badge" style="background: var(--secondary); color: white; padding: 4px 12px; border-radius: 99px; font-size: 0.8rem;">Premium Paws Member 👑</span>
+                        </div>
+                        <div class="rating">★★★★★</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>Even the Basic plan has everything I need for my single dog. Great value for money.</p>
+                        <span class="author">Lakshmi K.</span>
+                        <div style="margin: 8px 0;">
+                            <span class="badge" style="border: 1px solid var(--primary); color: var(--primary); padding: 4px 12px; border-radius: 99px; font-size: 0.8rem;">Basic Paw Member</span>
+                        </div>
+                        <div class="rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: FAQ Accordion -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about PawStore membership</p>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I cancel my membership anytime?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, absolutely. You can cancel your membership at any time from your dashboard. There are no cancellation fees and your access continues until the end of your billing period.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is included in the monthly subscription box?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Each box is curated by our vet team and includes 4-6 items such as treats, toys, grooming samples, and health supplements tailored to your pet type.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I switch between plans?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. You can upgrade or downgrade your plan at any time. Upgrades take effect immediately, downgrades apply at the next billing cycle.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is the 7-day free trial available on all plans?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, all three plans come with a 7-day free trial. No credit card is required to start your trial.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How does the vet consultation work for Premium members?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Premium members get one free 30-minute online vet consultation per year. Additional sessions can be booked as add-ons at ₹299 per session.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Does the membership include free shipping on all orders?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Basic and Popular plans include free shipping on orders above ₹999. Premium members enjoy free delivery on ALL orders with no minimum.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What pets are supported by PawStore?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>PawStore supports dogs, cats, birds, rabbits, hamsters, and other small pets. Our subscription boxes can be customized based on your pet type.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I access my pet nutritionist?
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Premium members can schedule a chat or video call with our certified pet nutritionist directly from their dashboard. Response within 1 hour during business hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Final CTA -->
+        <section class="cta-banner-gradient" style="padding: 100px 0; text-align: center;">
+            <div class="container">
+                <h2>Start Your Free 7-Day Trial Today</h2>
+                <p>No credit card required. Cancel anytime. Join 12,000+ happy pet parents.</p>
+                <div class="hero__btns" style="margin-top: var(--space-lg);">
+                    <button class="btn-primary" style="background: white; color: var(--primary); border-color: white;">Get Started Free</button>
+                    <button class="btn-secondary" style="border-color: white; color: white;">View All Plans</button>
+                </div>
+                <div class="cta-trust">
+                    <span><i data-lucide="lock" style="width: 16px;"></i> Secure Payment</span>
+                    <span><i data-lucide="rotate-ccw" style="width: 16px;"></i> Cancel Anytime</span>
+                    <span><i data-lucide="paw-print" style="width: 16px;"></i> 7-Day Free Trial</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--space-md);">
+                        <i data-lucide="paw-print"></i> PawStore
+                    </a>
+                    <p>Your one-stop destination for premium specialty pet food and supplies in India.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Coimbatore, Tamil Nadu</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>✉ hello@pawstore.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PawStore. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="caption">Privacy Policy</a>
+                    <a href="#" class="caption">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
