@@ -46,13 +46,6 @@
         </nav>
 
         <div class="dash-sidebar-footer">
-            <div class="dash-user-info">
-                <div class="dash-avatar">AK</div>
-                <div class="dash-user-details">
-                    <span class="name">Arjun Kumar</span>
-                    <span class="email">arjun@email.com</span>
-                </div>
-            </div>
             <a href="login.html" class="logout-link">
                 <i data-lucide="log-out"></i> Logout
             </a>
@@ -66,11 +59,11 @@
                 <button class="menu-toggle">
                     <i data-lucide="menu"></i>
                 </button>
-                <h1>Overview</h1>
+               
             </div>
             <div class="dash-header-right">
                 <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
-                    RTL / LTR
+                    RTL
                 </button>
                 <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
                     <i data-lucide="moon" id="theme-icon"></i>
@@ -95,12 +88,12 @@
                 </div>
 
                 <div class="stats-grid">
-                    <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">
-                        <div class="stat-icon"><i data-lucide="package"></i></div>
+                    <div class="stat-card" style="cursor: pointer; background: var(--primary); color: #FFFFFF;" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">
+                        <div class="stat-icon" style="background: rgba(255,255,255,0.1); color: #FFFFFF;"><i data-lucide="package"></i></div>
                         <div class="stat-info">
-                            <h3>Total Orders</h3>
+                            <h3 style="color: rgba(255,255,255,0.8);">Total Orders</h3>
                             <div class="stat-value">24</div>
-                            <div class="stat-trend up">↑ 3 this month</div>
+                            <div class="stat-trend up" style="color: #4ade80;">↑ 3 this month</div>
                         </div>
                     </div>
                     <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'plan\']').click()">
@@ -111,18 +104,18 @@
                             <div class="stat-trend">Renews in 12 days</div>
                         </div>
                     </div>
-                    <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'plan\']').click()">
-                        <div class="stat-icon"><i data-lucide="gift"></i></div>
+                    <div class="stat-card" style="cursor: pointer; background: var(--secondary); color: #FFFFFF;" onclick="document.querySelector('.dash-nav-link[data-target=\'plan\']').click()">
+                        <div class="stat-icon" style="background: rgba(255,255,255,0.1); color: #FFFFFF;"><i data-lucide="gift"></i></div>
                         <div class="stat-info">
-                            <h3>Reward Points</h3>
+                            <h3 style="color: rgba(255,255,255,0.8);">Reward Points</h3>
                             <div class="stat-value">1,240</div>
-                            <div class="stat-trend up">↑ 150 pts</div>
+                            <div class="stat-trend up" style="color: #FFFFFF;">↑ 150 pts</div>
                         </div>
                     </div>
-                    <div class="stat-card" style="cursor: pointer;" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">
-                        <div class="stat-icon"><i data-lucide="truck"></i></div>
+                    <div class="stat-card" style="cursor: pointer; border: 1px solid var(--primary); background: var(--primary-light); color: var(--primary);" onclick="document.querySelector('.dash-nav-link[data-target=\'orders\']').click()">
+                        <div class="stat-icon" style="background: var(--primary); color: #FFFFFF;"><i data-lucide="truck"></i></div>
                         <div class="stat-info">
-                            <h3>Pending Delivery</h3>
+                            <h3 style="color: var(--primary); opacity: 0.8;">Pending Delivery</h3>
                             <div class="stat-value">02</div>
                             <div class="stat-trend">Next: Tomorrow</div>
                         </div>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
     <header class="header">
         <div class="container header__container">
             <a href="index.html" class="logo">
                 <i data-lucide="paw-print"></i> PawStore
             </a>
-            
+
             <nav class="nav-desktop">
                 <ul class="nav-list">
                     <li class="nav-item-has-dropdown">
@@ -39,7 +41,7 @@
 
             <div class="header__actions">
                 <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
-                    RTL / LTR
+                    RTL
                 </button>
                 <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
                     <i data-lucide="moon" id="theme-icon"></i>
@@ -61,7 +63,8 @@
                 <li><a href="services.html" class="nav-link" onclick="toggleMobileMenu()">Shop</a></li>
                 <li><a href="about.html" class="nav-link" onclick="toggleMobileMenu()">About</a></li>
                 <li><a href="pricing.html" class="nav-link" onclick="toggleMobileMenu()">Pricing</a></li>
-                <li><a href="admin-dashboard.html" class="nav-link" onclick="toggleMobileMenu()">Admin Dashboard</a></li>
+                <li><a href="admin-dashboard.html" class="nav-link" onclick="toggleMobileMenu()">Admin Dashboard</a>
+                </li>
                 <li><a href="dashboard.html" class="nav-link" onclick="toggleMobileMenu()">User Dashboard</a></li>
             </ul>
             <div class="mobile-actions">
@@ -69,7 +72,7 @@
                 <a href="signup.html" class="btn-primary">Get Started</a>
                 <div class="mobile-toggles">
                     <button class="icon-btn" onclick="toggleRTL()">
-                        RTL / LTR
+                        RTL
                     </button>
                     <button class="icon-btn" onclick="toggleTheme()">
                         <i data-lucide="moon" id="theme-icon"></i>
@@ -87,8 +90,9 @@
                     <div class="hero-content">
                         <span class="hero-badge">🐾 India's #1 Pet Specialty Store</span>
                         <h1>Give Your Pet the Life They Deserve</h1>
-                        <p>Shop 5,000+ premium products curated by vets and pet nutrition experts. Delivered to your door in 24 hours.</p>
-                        <div class="hero__btns" style="justify-content: flex-start;">
+                        <p>Shop 5,000+ premium products curated by vets and pet nutrition experts. Delivered to your
+                            door in 24 hours.</p>
+                        <div class="hero__btns">
                             <a href="services.html" class="btn-primary">Shop Premium Range</a>
                             <a href="pricing.html" class="btn-secondary">View Membership Plans</a>
                         </div>
@@ -100,8 +104,10 @@
                     </div>
                     <div class="hero-image-wrapper">
                         <img src="images/gettyimages-2268564039-612x612.jpg" alt="Happy pets with premium products">
-                        <div class="hero-badge" style="position: absolute; bottom: 20px; left: -20px; background: white; padding: 15px 25px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 15px; color: var(--text-primary);">
-                            <div style="width: 40px; height: 40px; background: var(--secondary-light); color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <div class="hero-badge"
+                            style="position: absolute; bottom: 20px; left: -20px; background: var(--surface); border: 1px solid var(--border); padding: 15px 25px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 15px; color: var(--text-primary);">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--secondary-light); color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                 <i data-lucide="heart"></i>
                             </div>
                             <div>
@@ -142,6 +148,30 @@
             </div>
         </div>
 
+        <!-- Section 2.5: Social Proof Counter -->
+        <div class="counter-strip">
+            <div class="container">
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="12000+">0</span>
+                        <span class="counter-label">Happy Pet Parents</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="50000+">0</span>
+                        <span class="counter-label">Orders Delivered</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="5+">0</span>
+                        <span class="counter-label">Average Rating</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="500+">0</span>
+                        <span class="counter-label">Premium Brands</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Section 3: Featured Collection (Bento Grid) -->
         <section class="premium-collections">
             <div class="container">
@@ -151,7 +181,9 @@
                 </div>
                 <div class="bento-grid">
                     <a href="services.html" class="bento-card large">
-                        <div class="bg-img" style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="bg-img"
+                            style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center;">
+                        </div>
                         <div class="content">
                             <h3>Nutrition First</h3>
                             <p>Premium dog food collection</p>
@@ -159,7 +191,9 @@
                         </div>
                     </a>
                     <a href="services.html" class="bento-card medium-primary">
-                        <div class="bg-img" style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                        <div class="bg-img"
+                            style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        </div>
                         <div class="content">
                             <h3>Feline Favourites</h3>
                             <p>Exclusive cat collection</p>
@@ -167,7 +201,9 @@
                         </div>
                     </a>
                     <a href="services.html" class="bento-card medium-secondary">
-                        <div class="bg-img" style="background-image: url('images/gettyimages-2027091484-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                        <div class="bg-img"
+                            style="background-image: url('images/gettyimages-2027091484-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        </div>
                         <div class="content">
                             <h3>Tiny Paws</h3>
                             <p>For your small companions</p>
@@ -175,7 +211,9 @@
                         </div>
                     </a>
                     <a href="services.html" class="bento-card wide">
-                        <div class="bg-img" style="background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                        <div class="bg-img"
+                            style="background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        </div>
                         <div class="content">
                             <h3>Grooming Essentials</h3>
                             <p>Professional tools for home care</p>
@@ -194,30 +232,30 @@
                     <p>From browse to bowl in just a few steps</p>
                 </div>
                 <div class="steps-container">
-                        <div class="step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-icon-v2"><i data-lucide="search"></i></div>
-                            <h3>Browse & Discover</h3>
-                            <p>Explore 5,000+ vet-approved products</p>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-icon-v2"><i data-lucide="shopping-cart"></i></div>
-                            <h3>Add to Cart</h3>
-                            <p>Build your perfect pet care bundle</p>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-icon-v2"><i data-lucide="truck"></i></div>
-                            <h3>Fast Delivery</h3>
-                            <p>Delivered to your door in 24 hours</p>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-icon-v2"><i data-lucide="heart"></i></div>
-                            <h3>Happy Pets</h3>
-                            <p>Watch your pet thrive with premium nutrition</p>
-                        </div>
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-icon-v2"><i data-lucide="search"></i></div>
+                        <h3>Browse & Discover</h3>
+                        <p>Explore 5,000+ vet-approved products</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-icon-v2"><i data-lucide="shopping-cart"></i></div>
+                        <h3>Add to Cart</h3>
+                        <p>Build your perfect pet care bundle</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-icon-v2"><i data-lucide="truck"></i></div>
+                        <h3>Fast Delivery</h3>
+                        <p>Delivered to your door in 24 hours</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-icon-v2"><i data-lucide="heart"></i></div>
+                        <h3>Happy Pets</h3>
+                        <p>Watch your pet thrive with premium nutrition</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -234,20 +272,23 @@
                         <h3>Pup Box</h3>
                         <div class="sub-price">₹599/mo</div>
                         <p>Toys, treats & grooming essentials for your dog</p>
-                        <button class="btn-secondary" style="width: 100%; margin-top: var(--space-md);">Subscribe</button>
+                        <button class="btn-secondary"
+                            style="width: 100%; margin-top: var(--space-md);">Subscribe</button>
                     </div>
                     <div class="sub-card popular">
                         <span class="popular-badge">⭐ Most Popular</span>
                         <h3>Kitty Box</h3>
                         <div class="sub-price">₹499/mo</div>
                         <p>Premium treats and playthings for your feline friend</p>
-                        <button class="btn-primary" style="width: 100%; margin-top: var(--space-md);">Subscribe Now</button>
+                        <button class="btn-primary" style="width: 100%; margin-top: var(--space-md);">Subscribe
+                            Now</button>
                     </div>
                     <div class="sub-card">
                         <h3>Mixed Paws Box</h3>
                         <div class="sub-price">₹799/mo</div>
                         <p>Perfect for multi-pet homes — dogs, cats & more</p>
-                        <button class="btn-secondary" style="width: 100%; margin-top: var(--space-md);">Subscribe</button>
+                        <button class="btn-secondary"
+                            style="width: 100%; margin-top: var(--space-md);">Subscribe</button>
                     </div>
                 </div>
             </div>
@@ -262,7 +303,9 @@
                 </div>
                 <div class="testimonial-grid"> <!-- Reusing grid utility -->
                     <div class="blog-card">
-                        <div class="blog-banner" style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;"></div>
+                        <div class="blog-banner"
+                            style="background-image: url('images/gettyimages-1265235648-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;">
+                        </div>
                         <div class="blog-content">
                             <span class="tag-badge">Nutrition</span>
                             <h3>10 Signs Your Dog Needs a Diet Change</h3>
@@ -271,7 +314,9 @@
                         </div>
                     </div>
                     <div class="blog-card">
-                        <div class="blog-banner" style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;"></div>
+                        <div class="blog-banner"
+                            style="background-image: url('images/gettyimages-1265237454-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;">
+                        </div>
                         <div class="blog-content">
                             <span class="tag-badge">Grooming</span>
                             <h3>How to Choose the Right Cat Litter</h3>
@@ -280,7 +325,9 @@
                         </div>
                     </div>
                     <div class="blog-card">
-                        <div class="blog-banner" style="background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;"></div>
+                        <div class="blog-banner"
+                            style="background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; font-size: 0;">
+                        </div>
                         <div class="blog-content">
                             <span class="tag-badge">Health</span>
                             <h3>Supplements Every Senior Pet Needs</h3>
@@ -295,29 +342,6 @@
             </div>
         </section>
 
-        <!-- Section 7: Social Proof Counter -->
-        <div class="counter-strip">
-            <div class="container">
-                <div class="counter-grid">
-                    <div class="counter-item">
-                        <span class="counter-number" data-target="12000">0</span>
-                        <span class="counter-label">Happy Pet Parents</span>
-                    </div>
-                    <div class="counter-item">
-                        <span class="counter-number" data-target="50000">0</span>
-                        <span class="counter-label">Orders Delivered</span>
-                    </div>
-                    <div class="counter-item">
-                        <span class="counter-number" data-target="5">0</span>
-                        <span class="counter-label">Average Rating</span>
-                    </div>
-                    <div class="counter-item">
-                        <span class="counter-number" data-target="500">0</span>
-                        <span class="counter-label">Premium Brands</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Section 8: Newsletter + App -->
         <section class="newsletter-app-section">
@@ -327,7 +351,8 @@
                         <h3>Stay in the Loop</h3>
                         <p>Deals, tips, and new arrivals straight to your inbox</p>
                         <form class="newsletter-form" style="max-width: 100%;">
-                            <input type="email" placeholder="Enter your email" required style="border: 1px solid var(--border);">
+                            <input type="email" placeholder="Enter your email" required
+                                style="border: 1px solid var(--border);">
                             <button type="submit" class="btn-primary">Subscribe</button>
                         </form>
                     </div>
@@ -336,8 +361,12 @@
                         <h3>Shop on the Go</h3>
                         <p>Download the PawStore app for exclusive app-only deals</p>
                         <div class="download-badges">
-                            <button class="btn-secondary"><i data-lucide="smartphone" style="width: 16px; margin-right: 4px; vertical-align: middle;"></i> App Store</button>
-                            <button class="btn-secondary"><i data-lucide="play" style="width: 16px; margin-right: 4px; vertical-align: middle;"></i> Google Play</button>
+                            <button class="btn-secondary"><i data-lucide="smartphone"
+                                    style="width: 16px; margin-right: 4px; vertical-align: middle;"></i> App
+                                Store</button>
+                            <button class="btn-secondary"><i data-lucide="play"
+                                    style="width: 16px; margin-right: 4px; vertical-align: middle;"></i> Google
+                                Play</button>
                         </div>
                     </div>
                 </div>
@@ -400,4 +429,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -185,7 +185,7 @@ function initCounters() {
     const speed = 200;
 
     const animate = (counter) => {
-        const target = +counter.getAttribute('data-target');
+        const target = parseInt(counter.getAttribute('data-target'));
         const count = +counter.innerText.replace(/[^0-9.]/g, '');
         const inc = target / speed;
 

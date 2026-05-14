@@ -41,7 +41,7 @@
 
             <div class="header__actions">
                 <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL">
-                    RTL / LTR
+                    RTL
                 </button>
                 <button class="icon-btn" onclick="toggleTheme()" title="Toggle Theme">
                     <i data-lucide="moon" id="theme-icon"></i>
@@ -72,7 +72,7 @@
                 <a href="signup.html" class="btn-primary">Get Started</a>
                 <div class="mobile-toggles">
                     <button class="icon-btn" onclick="toggleRTL()">
-                        RTL / LTR
+                        RTL
                     </button>
                     <button class="icon-btn" onclick="toggleTheme()">
                         <i data-lucide="moon" id="theme-icon"></i>
@@ -99,7 +99,7 @@
         <div class="breadcrumb-bar">
             <div class="container breadcrumb-bar__container">
                 <div class="breadcrumbs">
-                    <a href="index.html">Home</a> › <span class="active">Shop</span>
+                    <span class="active">Shop</span>
                 </div>
                 <div class="results-info">
                     Showing 12 of 120 products
@@ -423,67 +423,41 @@
         </section>
 
         <!-- Section 5: Recently Viewed / Recommended -->
-        <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url('images/gettyimages-1265237454-612x612.jpg'); text-align: center; justify-content: center;">
-            <div class="container" style="width: 100%;">
-                <div class="section-header" style="margin-left: auto; margin-right: auto;">
+        <section class="recommended-section">
+            <div class="container">
+                <div class="section-header">
                     <h2>You Might Also Like</h2>
                     <p>Based on popular choices from pet parents like you</p>
                 </div>
-                <div class="product-grid" style="justify-content: center;"> <!-- Reusing 4-col grid style from home -->
-                    <div class="product-card-adv" data-price="599">
-                        <div class="card-image-area"
-                            style="background-image: url('images/gettyimages-2232665282-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
-                        </div>
-                        <div class="card-body">
-                            <h3>Drools Puppy Starter</h3>
-                            <p class="card-desc">Ideal transition food for puppies.</p>
-                            <div class="card-rating">★★★★★</div>
-                            <p class="card-price">₹599</p>
-                            <button class="btn-primary">Add to Cart</button>
-                        </div>
+                <div class="recommended-grid">
+                    <div class="rec-card">
+                        <div class="rec-image" style="background-image: url('images/gettyimages-2232665282-612x612.jpg');"></div>
+                        <h3>Drools Puppy Starter</h3>
+                        <p class="caption">Ideal transition food for puppies.</p>
+                        <div class="rec-price">₹599</div>
+                        <button class="btn-primary" style="width: 100%;">Add to Cart</button>
                     </div>
-                    <div class="product-card-adv" data-price="899">
-                        <div class="card-image-area"
-                            style="background-image: url('images/gettyimages-2171616356-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
-                        </div>
-                        <div class="card-body">
-                            <h3>Catit Grooming Kit</h3>
-                            <p class="card-desc">Professional tools for cat grooming.</p>
-                            <div class="card-rating">★★★★★</div>
-                            <p class="card-price">₹899</p>
-                            <button class="btn-primary">Add to Cart</button>
-                        </div>
+                    <div class="rec-card">
+                        <div class="rec-image" style="background-image: url('images/gettyimages-2171616356-612x612.jpg');"></div>
+                        <h3>Catit Grooming Kit</h3>
+                        <p class="caption">Everything for a shiny coat.</p>
+                        <div class="rec-price">₹899</div>
+                        <button class="btn-primary" style="width: 100%;">Add to Cart</button>
                     </div>
-                    <div class="product-card-adv" data-price="3499">
-                        <div class="card-image-area"
-                            style="background-image: url('images/gettyimages-2226372405-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
-                        </div>
-                        <div class="card-body">
-                            <h3>Trixie Cat Tree</h3>
-                            <p class="card-desc">Multi-level scratching post and bed.</p>
-                            <div class="card-rating">★★★★★</div>
-                            <p class="card-price">₹3,499</p>
-                            <button class="btn-primary">Add to Cart</button>
-                        </div>
+                    <div class="rec-card">
+                        <div class="rec-image" style="background-image: url('images/gettyimages-2226372405-612x612.jpg');"></div>
+                        <h3>Premium Chew Toy</h3>
+                        <p class="caption">Durable and safe for all sizes.</p>
+                        <div class="rec-price">₹349</div>
+                        <button class="btn-primary" style="width: 100%;">Add to Cart</button>
                     </div>
-                    <div class="product-card-adv" data-price="249">
-                        <div class="card-image-area"
-                            style="background-image: url('images/gettyimages-2251625835-612x612.jpg'); background-size: cover; background-position: center; font-size: 0;">
-                        </div>
-                        <div class="card-body">
-                            <h3>Beaphar Worming Tabs</h3>
-                            <p class="card-desc">Effective worming for adult cats.</p>
-                            <div class="card-rating">★★★★★</div>
-                            <p class="card-price">₹249</p>
-                            <button class="btn-primary">Add to Cart</button>
-                        </div>
+                    <div class="rec-card">
+                        <div class="rec-image" style="background-image: url('images/gettyimages-1265237454-612x612.jpg');"></div>
+                        <h3>Whiskas Dry Cat Food</h3>
+                        <p class="caption">Complete nutrition for adult cats.</p>
+                        <div class="rec-price">₹450</div>
+                        <button class="btn-primary" style="width: 100%;">Add to Cart</button>
                     </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 48px;">
-                    <button class="btn-primary"
-                        style="padding: 16px 40px; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">Explore
-                        All Recommendations</button>
                 </div>
             </div>
         </section>
