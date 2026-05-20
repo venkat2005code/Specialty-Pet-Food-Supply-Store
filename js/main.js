@@ -764,3 +764,19 @@ document.addEventListener('DOMContentLoaded', () => {
         initDashboard();
     }
 });
+
+// Recommended Slider Navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.recommended-grid');
+    const prevBtn = document.getElementById('rec-prev');
+    const nextBtn = document.getElementById('rec-next');
+
+    if(slider && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+    }
+});
