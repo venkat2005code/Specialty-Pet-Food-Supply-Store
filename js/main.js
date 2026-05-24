@@ -531,10 +531,7 @@ function initSignup() {
     const confirmInput = document.getElementById('confirmPassword');
     const strengthBar = document.getElementById('strengthBar');
     const strengthText = document.getElementById('strengthText');
-    const petPills = document.querySelectorAll('.pet-pill');
     const togglePassBtns = document.querySelectorAll('.toggle-password');
-
-    let selectedPets = [];
 
     // Password Visibility Toggles
     togglePassBtns.forEach(btn => {
@@ -579,18 +576,6 @@ function initSignup() {
         if (strengthText) strengthText.style.color = result.color;
     }
 
-    // Pet Pills Multi-Selection
-    petPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            pill.classList.toggle('active');
-            const type = pill.getAttribute('data-type');
-            if (pill.classList.contains('active')) {
-                selectedPets.push(type);
-            } else {
-                selectedPets = selectedPets.filter(p => p !== type);
-            }
-        });
-    });
 
     // Form Submission
     if (signupForm) {

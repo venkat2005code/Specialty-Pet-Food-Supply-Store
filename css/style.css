@@ -88,6 +88,16 @@ html {
     scrollbar-gutter: stable;
 }
 
+html:has(.auth-page) {
+    scrollbar-gutter: auto;
+}
+
+@media (min-width: 768px) {
+    html:has(.auth-page) {
+        overflow: hidden;
+    }
+}
+
 body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -2409,8 +2419,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 80px 24px;
+    justify-content: center;
+    padding: 40px 24px;
     position: relative;
     overflow-y: auto;
 }
@@ -2443,6 +2453,7 @@ section {
     align-items: center;
     gap: var(--space-xs);
 }
+
 
 .auth-card {
     background-color: var(--surface);
@@ -2677,11 +2688,12 @@ section {
         width: 100%;
         height: auto;
         min-height: 100vh;
-        padding: var(--space-lg) 0;
+        padding: 40px 24px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow-y: visible;
     }
 
     .auth-container {
@@ -2805,7 +2817,8 @@ section {
         margin-bottom: 12px;
     }
 
-    .social-btns {
+    .social-btns,
+    .social-btns-row {
         margin-bottom: var(--space-md);
         gap: 8px;
     }
@@ -4924,42 +4937,47 @@ input:checked+.slider:before {
     color: var(--primary);
 }
 
-/* Clean Dashboard Scrollbars */
+/* Clean Dashboard and Auth Scrollbars */
 .dash-sidebar-nav::-webkit-scrollbar,
 .dash-content::-webkit-scrollbar,
-.dash-table-wrapper::-webkit-scrollbar {
+.dash-table-wrapper::-webkit-scrollbar,
+.auth-right::-webkit-scrollbar {
     width: 6px;
     height: 6px;
 }
 
 .dash-sidebar-nav::-webkit-scrollbar-track,
 .dash-content::-webkit-scrollbar-track,
-.dash-table-wrapper::-webkit-scrollbar-track {
+.dash-table-wrapper::-webkit-scrollbar-track,
+.auth-right::-webkit-scrollbar-track {
     background: transparent;
 }
 
 .dash-sidebar-nav::-webkit-scrollbar-thumb,
 .dash-content::-webkit-scrollbar-thumb,
-.dash-table-wrapper::-webkit-scrollbar-thumb {
+.dash-table-wrapper::-webkit-scrollbar-thumb,
+.auth-right::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 html.dark .dash-sidebar-nav::-webkit-scrollbar-thumb,
 html.dark .dash-content::-webkit-scrollbar-thumb,
-html.dark .dash-table-wrapper::-webkit-scrollbar-thumb {
+html.dark .dash-table-wrapper::-webkit-scrollbar-thumb,
+html.dark .auth-right::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.1);
 }
 
 /* For extreme cleanliness: hide scrollbars unless hovering (optional, but let's just make them very subtle first) */
-.dash-sidebar-nav, .dash-content, .dash-table-wrapper {
+.dash-sidebar-nav, .dash-content, .dash-table-wrapper, .auth-right {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
 }
 
 html.dark .dash-sidebar-nav, 
 html.dark .dash-content, 
-html.dark .dash-table-wrapper {
+html.dark .dash-table-wrapper,
+html.dark .auth-right {
     scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 
